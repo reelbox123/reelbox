@@ -13,15 +13,15 @@ function LandingPage () {
                     <button type="button">DOWNLOAD APP</button>
                 </div>
                 <div className="header-img">
-                    <img src="Images/hh.png" alt="" />
+                    <img src="./Images/hh.png" alt="" />
                 </div>
                 <div className="header-subtext">
-                    <img src="Images/Frame 630367.png" alt="" />
+                    <img src="./Images/Frame 630367.png" alt="" />
                     <h2>290K +</h2>
                     <h4>Happy Customers Using XtremePay</h4>
                     <p>4.9 <span className="five">/5</span></p>
                     <div className="star">
-                        <img src="Images/Frame 630368.png" alt="" /><span>(Ratings)</span>
+                        <img src="./Images/Frame 630368.png" alt="" /><span>(Ratings)</span>
                     </div>
                     <h3>Download at</h3>
                     <div className="ggle">
