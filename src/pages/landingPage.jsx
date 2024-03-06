@@ -142,7 +142,7 @@ function LandingPage () {
                 <h2>Services we are offering</h2>
                 <img src="./Images/Vector 3.png" alt="" />
                 <div className="services-text">
-                    <img src="./Images/Frame 630537.png" alt="" />
+                    <img src="./Images/Group 38.png" alt="" />                                                                                                                   
                     <div className="service-subtext">
                         <h2>Moola</h2>
                         <h3>Save with Excitement Save  and Win Up to 10M weekly</h3>
@@ -158,7 +158,7 @@ function LandingPage () {
                         <p>Passabi offers seamless group savings and provide access to no interest loans for individual members that have come together to solve their money challenges. Digitalize rotating savings platform that is seamlessly integrates with commercial bank and fin-tech companies to offers access to secure and easy to use financial services</p>
                         <button type="button">SEE MORE <img src="./Images/ic.png" alt="" /></button>
                     </div>
-                    <img src="./Images/Frame 630538.png" alt="" />
+                    <img src="./Images/Group 40.png" alt="" />
                 </div>
             </div>
             <div className="customers">
@@ -173,6 +173,7 @@ function LandingPage () {
                         </div>
                     </div>
                 </div>
+                <h2 className='debs'>OMOBOLANLE <br></br> ISREAL</h2>
                 <img className="eeh" src="./Images/Rectangle 1.png" alt="" />
             </div>
             <div className="end-end">
