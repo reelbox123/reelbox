@@ -54,7 +54,7 @@ function LandingPage () {
                     <p>Transactions in one day</p>
                 </div>
             </div>
-            <div className="details">
+            <div className="details"  data-aos="fade-down" data-aos-easing="linear" data-aos-duration="2000">
                 <div className="details-text-1">
                     <h2>Why you must use Xtrempay</h2>
                     <img className="ii" src="./Images/Vector 1.png" alt="" />
@@ -91,11 +91,11 @@ function LandingPage () {
                 </div>
             </div>
             <div className="ideas">
-                <div className="ideas-text">
+                <div className="ideas-text" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1000">
                     <h2>What can you do with Xtrempay</h2>
                     <p>Do not worry, we are here to make you smile. By offering you reliable financial service such as cash withdrawal, Money transfer, Bill payment, Airtime top up, Account opening and loan support.</p>
                 </div>
-                <div className="ideas-subtext">
+                <div className="ideas-subtext" data-aos="fade-left">
                     <div className="ideas-sub">
                         <img src="./Images/Frame 630500.png" alt="" />
                         <div className="transfer">
@@ -141,7 +141,7 @@ function LandingPage () {
             <div className="services">
                 <h2>Services we are offering</h2>
                 <img src="./Images/Vector 3.png" alt="" />
-                <div className="services-text">
+                <div className="services-text" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1000">
                     <img src="./Images/Group 38.png" alt="" />                                                                                                                   
                     <div className="service-subtext">
                         <h2>Moola</h2>
@@ -151,7 +151,7 @@ function LandingPage () {
                     </div>
                 </div>
                 <img className="rec" src="./Images/rec.png" alt="" />
-                <div className="services-text">
+                <div className="services-text" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1000">
                     <div className="service-subtext">
                         <h2>Passabi</h2>
                         <h3>Made for Small Business Owners</h3>
@@ -176,7 +176,7 @@ function LandingPage () {
                 <h2 className='debs'>OMOBOLANLE <br></br> ISREAL</h2>
                 <img className="eeh" src="./Images/Rectangle 1.png" alt="" />
             </div>
-            <div className="end-end">
+            <div className="end-end" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1000">
                 <img src="./Images/Group 34.png" alt="" />
                 <div className="end-end-text">
                     <h2>END-TO-END SECURITY</h2>
@@ -188,7 +188,7 @@ function LandingPage () {
                     <li><img src="./Images/Frame 630486.png" alt="" />Data Residency and Compliance: Meeting Global Standards</li>
                 </div>
             </div>
-            <div className="agent">
+            <div className="agent" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
                 <div className="agent-text">
                     <h2>BECOME AN AGENT</h2>
                     <p>The easiest and reliable way of providing affordable financial service in Africa</p>

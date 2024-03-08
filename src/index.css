@@ -309,7 +309,7 @@ nav ul li {
   margin-bottom: 20px;
 }
 .services-text img {
-  width: 25%;
+  width: 23%;
 }
 .service-subtext {
   color: white;
@@ -353,7 +353,7 @@ nav ul li {
   padding: 70px 90px 70px 200px;
 }
 .end-end img{
-  width: 35%;
+  width: 32%;
   margin-right: 150px;
 }
 .end-end-text {
@@ -407,7 +407,7 @@ nav ul li {
 }
 .customer-subtext {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   flex-direction: column  ;
   background-color: #2475FB;
@@ -415,7 +415,7 @@ nav ul li {
   width: 40%;
 }
 .customer-text p {
-  padding: 50px 30px 10px 30px;
+  padding: 110px 30px 10px 30px;
   width: 100%;
   font-size: 16px;
 }
@@ -455,8 +455,8 @@ nav ul li {
 
 }
 .agent p {
-  color: white;
-  font-size: 14px;
+  color: rgb(167, 163, 163);
+  font-size: 15px;
   width: 90%;
   margin-bottom: 30px;
 }
