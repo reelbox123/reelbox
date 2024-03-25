@@ -15,7 +15,10 @@ nav ul li {
   font-weight: 500;
 }
 nav ul li a:hover {
-  color: green;
+  color: #FE9226;
+}
+.active {
+  color: #FE9226;
 }
 .nav {
   position: fixed;
@@ -311,10 +314,13 @@ nav ul li {
 .services-text img {
   width: 23%;
 }
+#ss {
+  margin-left: 0px;
+}
 .service-subtext {
   color: white;
   width: 35%;
-  margin-left: 60px;
+  margin-left: 80px;
 }
 .service-subtext h3 {
   font-size: 20px;
@@ -468,11 +474,13 @@ nav ul li {
 }
 .agent button {
   display: flex;
-  justify-content: center;
-  background-color: white;
-  padding: 10px 1px 10px 1px;
+  justify-content: flex-start;
+  background-color: #FF9227;
+  padding: 10px 1px 10px 30px;
   border-radius: 25px;
   width: 55%;
+  color: white;
+  margin-bottom: 20px;
 }
 .agent button img {
   width: 9%;
@@ -488,7 +496,7 @@ nav ul li {
 .contact {
   display: grid;
   grid-template-columns: 30% 25% 27% 20%;
-  padding: 50px 50px 50px 40px;
+  padding: 20px 50px 50px 40px;
   background-color: white;
 }
 .xtreme-contact img{
@@ -540,3 +548,397 @@ footer {
   background-color: #0E0E0E;
   color: white;
 }
+.m-header {
+  display: flex;
+  /* justify-content: space-between; */
+  padding: 120px 90px 80px 90px;
+  align-items: center;
+}
+.moola-header {
+  width: 60%;
+}
+.moola-header h1 {
+  font-size: 40px;
+  font-weight: 700;
+  color: #FE9226;
+  margin-bottom: 5px;
+}
+.moola-header h2 {
+  font-size: 37px;
+  font-weight: 700;
+  color: #2F2F32;
+}
+.moola-header h3 {
+  font-size: 35px;
+}
+.moola-header p {
+  margin-top: 20px;
+  color: #717177;
+  width: 50%;
+  font-size: 14px;
+
+}
+.m-header img {
+  background-image: url('/public/Images/Ellipse 77.png');
+  background-position: cover;
+  background-repeat: no-repeat;
+  background-size: 95%;
+  width: 35%;
+}
+.moola-features {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.moola-features h2 {
+  font-size: 25px;
+  font-weight: 600;
+  color: #2F2F32;
+  margin-bottom: 5px;
+}
+.moola-features-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 80px 80px 80px;
+}
+.moola-features-header img {
+  width: 20%;
+  margin-top: 5px;
+}
+.moola-signup {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 70px;
+  margin-left: 8em;
+  margin-bottom: 70px;
+  margin-right: 7em;
+  background-color: #FE9226;
+  padding-left: 70px;
+  width: 80%;
+}
+.moola-signup img {
+  width: 30%;
+}
+.moola-signup-text  {
+  margin-left: 120px;
+}
+.moola-signup-text h2 {
+  font-size: 35px;
+  font-weight: 600;
+  color: #2F2F32;
+  width: 60%; 
+}
+.moola-signup p {
+  color: white;
+  margin-top: 20px;
+  font-weight: normal;
+}
+
+.rec {
+  width: 85%;
+  margin: 0px 80px 0px 80px;
+}
+.contact-support {
+  margin-top: 70px;
+}
+
+.contact-support h1{
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: #1E1C1C;
+  text-align: center;
+}
+.contact-support p {
+  text-align: center;
+  font-size: 20px;
+  color: #2F2F32;
+}
+.contact-form {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 30px;
+
+  margin-bottom: 100px;
+}
+.contact-form img {
+  width: 29%;
+}
+.contact-form form {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-right: 120px;
+}
+.contact-form label {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.contact-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 170px 100px 100px 100px;
+  background-image: url('/public/Images/contact.png');
+  background-position: center;
+  background-size: cover;
+}
+.contact-header h1 {
+  color: white;
+  font-size: 35px;
+  font-weight: 700;
+}
+.contacts-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+  margin-bottom: 50px;
+}
+.contacts-links ul  {
+  display: flex;
+}
+.contacts-links ul li {
+  margin-right: 70px;
+}
+.contacts-links ul li a {
+  font-size: 20px;
+  color: #717177;
+}
+.contacts-links .m-link {
+  background-color: #F1F1F1;
+  color: black;
+  padding: 5px 20px 5px 20px;
+  border-radius: 20px;
+}
+.contact-form input {
+  border: 1px solid #d7d7da;
+  margin-bottom: 15px;
+  padding: 7px 7px 7px 15px;
+  font-size: 19px;
+  border-radius: 5px;
+  width: 130%;
+  outline: none;
+}
+.contact-form .msg {
+  padding-bottom: 50px;
+}
+.labels form button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FE9226;
+  color: white;
+  font-size: 14px;
+  padding: 17px 30px 17px 30px;
+  border-radius: 40px;
+  width: 130%;
+}
+.passabi-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 170px 100px 100px 100px;
+  background-image: url('/public/Images/Retailer 1.png');
+  background-position: top center;
+  background-size: cover;
+}
+.faq-header  {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 170px 100px 100px 100px;
+  background-image: url('/public/Images/sme.png');
+  background-position: top center;
+  background-size: cover;
+}
+.faq-header h1 {
+  color: white;
+  font-size: 35px;
+  font-weight: 700;
+}
+.passabi-header h1 {
+  color: white;
+  font-size: 35px;
+  font-weight: 700;
+}
+.passabi-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+} 
+.passabi-text h1  {
+  text-align: center;
+  width: 50%;
+  color: #2F2F32;
+  font-weight: 500;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  font-size: 25px;
+}
+.passabi-text p {
+  text-align: center;
+  margin-bottom: 30px;
+  width: 70%;
+  font-size: 15px;
+  color: #717177;
+  line-height: 20px;
+}
+#pass-get {
+  margin-top: 40px;
+  background-color: #F1F1F1;
+}
+#pass-p {
+  margin-top: 20px;
+  width: 80%;
+  font-size: 14px;
+  color: #717177;
+}
+.pass-features {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 50px;
+}
+.pass-features h1 {
+  font-size: 30px;
+  font-weight: 500;
+  color: #2F2F32;
+  margin-bottom: 30px;
+}
+.pass-feat-val {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.pass-feat-val img {
+  width: 22%;
+}
+.pass-feat-val1 {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+.pass-feat1 {
+  display: flex;
+  margin-left: 70px;
+}
+.pass-feat1 img {
+  margin-top: 7px;
+  margin-right: 10px;
+  width: 5%;
+  height: 4vh;
+}
+.pass-feat1 h2 {
+  font-size: 20px;
+  font-weight: 500;
+}
+.pass-feat1 p {
+  margin-top: 5px;
+  color: #717177;
+  font-size: 14px;
+  width: 90%;
+  margin-bottom: 20px;
+}
+.pass-feat-val .pass-i {
+  width: 17%;
+}
+.moola-signup-text .m-p {
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+.playstore {
+  display: flex;
+}
+.playstore img { 
+  width: 20%;
+  margin-right: 15px;
+}
+.faq-passabi {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 80px;
+}
+.faq-passabi-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.faq-passabi-header img {
+  width: 10%;
+  margin-right: 10px;
+}
+.faq-passabi-header h1 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #2F2F32;
+}
+.faq-pass-text {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 35%;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eeeef1;
+}
+.faq1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+#faq-x {
+  flex-direction: column;
+}
+.faq-pass-text img {
+  width: 3%;
+  cursor: pointer;
+}
+.faq-pass-text h1 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #2F2F32;
+}
+.faq-convince {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.faq-convince h1 {
+  margin-top: 80px;
+  margin-bottom: 20px;
+  font-size: 35px;
+  font-weight: 700;
+  color: #2F2F32;
+}
+.faq-convince p {
+  width: 35%;
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: 30px;
+  font-size: 17px;
+  color: #505054;
+}
+.faq-convince button {
+  background-color: #FE9226;
+  padding: 5px 10px 5px 10px;
+  width: 15%;
+  margin-bottom: 60px;
+  border-radius: 30px;
+  color: white;
+}
+

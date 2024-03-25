@@ -6,7 +6,7 @@ function LandingPage () {
     return (
         <>
             <Navbar/>
-            <div className="header">
+            <div className="header" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
                 <div className="header-text">
                     <h1>Do More with Xtrem<span className="p">pay</span></h1>
                     <p>Empower yourself with lightning-fast transactions. Whether it's transferring funds, paying bills, or managing standing orders. Explore the uncommon possibilities of digital banking</p>
@@ -58,7 +58,7 @@ function LandingPage () {
                 <div className="details-text-1">
                     <h2>Why you must use Xtrempay</h2>
                     <img className="ii" src="./Images/Vector 1.png" alt="" />
-                    <div className="ggles">
+                    <div className="ggles">                                                         
                         <img src="./Images/googleplay.png" alt="" />
                         <img src="./Images/appstore.png" alt="" />
                     </div>
@@ -152,7 +152,7 @@ function LandingPage () {
                 </div>
                 <img className="rec" src="./Images/rec.png" alt="" />
                 <div className="services-text" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1000">
-                    <div className="service-subtext">
+                    <div className="service-subtext" id='ss'>
                         <h2>Passabi</h2>
                         <h3>Made for Small Business Owners</h3>
                         <p>Passabi offers seamless group savings and provide access to no interest loans for individual members that have come together to solve their money challenges. Digitalize rotating savings platform that is seamlessly integrates with commercial bank and fin-tech companies to offers access to secure and easy to use financial services</p>
@@ -194,7 +194,10 @@ function LandingPage () {
                     <p>The easiest and reliable way of providing affordable financial service in Africa</p>
                     <h3>Join us and grow your business fast</h3>
                     <button>
-                        <img src="./Images/whatsapp.png" alt="" />Contact to join Xtremepay
+                        <img src="./Images/arcticons.png" alt="" />Contact to join Xtremepay
+                    </button>
+                    <button className='seg'>
+                        <img src="./Images/whatsapp-call.png" alt="" />Send and Email
                     </button>
                 </div>
                 <img src="./Images/pos.png" alt="" />

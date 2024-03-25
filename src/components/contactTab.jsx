@@ -1,6 +1,7 @@
 function ContactTab () {
     return (
         <>
+            <hr className="contact-hr" />
              <section>
                 <div className="contact">
                     <div className="xtreme-contact">
@@ -11,9 +12,9 @@ function ContactTab () {
                         <h2>Page Links</h2>
                         <ul id="nav-links" className="nav-links">
                             <li><a href="/home">Home</a></li>
-                            <li><a href="/about">Features</a></li>
-                            <li><a href="/mentor">About Us</a></li>
-                            <li><a href="/mentee">Contact</a></li>
+                            <li><a href="/moola">Features</a></li>
+                            <li><a href="/passabi">About Us</a></li>
+                            <li><a href="/aboutUs">Contact</a></li>
                         </ul>
                     </div>
                     <div className="location">

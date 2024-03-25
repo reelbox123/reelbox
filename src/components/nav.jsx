@@ -1,4 +1,10 @@
+import { useState } from "react";
+
 function NavBar () {
+    const [color, setColor] = useState('#FE9226');
+    const activeClass =  () => {
+        
+    }
     return (
         <>
             <div className="nav bg-white py-2 shadow-black">
@@ -12,10 +18,11 @@ function NavBar () {
                         </div>
                     </div>
                     <ul id="nav-links">
-                        <li><a href="/home">Home</a></li>
-                        <li><a href="/about">Moola</a></li>
-                        <li><a href="/mentor">Passabi</a></li>
-                        <li><a href="/mentee">About Us</a></li>
+                        <li><a href="/home" onClick={activeClass}>Home</a></li>
+                        <li><a href="/moola"  onClick={activeClass}>Moola</a></li>
+                        <li><a href="/passabi"  onClick={activeClass}>Passabi</a></li>
+                        <li><a href="/about"  onClick={activeClass}>About Us</a></li>
+                        <li><a href="/faq"  onClick={activeClass}>FAQ</a></li>
                     </ul>
                     <div className="butn">
                         <button type="button">DOWNLOAD APP</button>
