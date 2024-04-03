@@ -1,7 +1,11 @@
 import Navbar from '../components/nav.jsx'
 import ContactTab from '../components/contactTab.jsx'
 import Footer from '../components/footer.jsx'
-import Carousel from 'react-bootstrap/Carousel';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 
 function LandingPage () {
     return (
@@ -164,49 +168,40 @@ function LandingPage () {
             </div>
             <div className="customers">
                 <h2>Here is what our customers think</h2>
-                <Carousel className='main-carousel'>
-                    <Carousel.Item>
-                        <div className="car-img">
+                <Swiper
+                    spaceBetween={30}
+                    centeredSlides={true}
+                    autoplay={{delay: 1500,disableOnInteraction: false,}}
+                    pagination={{clickable: true,}}
+                    navigation={true}
+                    modules={[Autoplay, Pagination, Navigation]}
+                    className="mySwiper"
+                    >
+                    <SwiperSlide>
+                        <div className="customer-text">
                             <img src="./Images/woman1.jpg" alt="" />
+                            <div className="customer-subtext">
+                                <p>“From the moment I downloaded XtremPay, I was impressed by its user-friendly interface. Setting up my account was a breeze, and I was quickly navigating through its features with ease. The simplicity of the app, coupled with its powerful functionalities, has made managing my money more convenient than ever”.</p>
+                            </div>
                         </div>
-                    <Carousel.Caption>
-                        <div className="customer-subtext">
-                            <p>"From the moment I downloaded XtremPay, I was impressed by its user-friendly interface. Setting up my account was a breeze, and I was quickly navigating through its features with ease. The simplicity of the app, coupled with its powerful functionalities, has made managing my money more convenient than ever."</p>
-                        </div>
-                        {/* <h2 className='debs'>OMOBOLANLE <br></br> ISREAL</h2> */}
-                    </Carousel.Caption>
-                    </Carousel.Item>
-                    <Carousel.Item>
-                        <div className="car-img">
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <div className="customer-text">
                             <img src="./Images/woman2.jpg" alt="" />
+                            <div className="customer-subtext">
+                                <p>“From the moment I downloaded XtremPay, I was impressed by its user-friendly interface. Setting up my account was a breeze, and I was quickly navigating through its features with ease. The simplicity of the app, coupled with its powerful functionalities, has made managing my money more convenient than ever”.</p>
+                            </div>
                         </div>
-                    <Carousel.Caption>
-                        <div className="customer-subtext">
-                            <p>"From the moment I downloaded XtremPay, I was impressed by its user-friendly interface. Setting up my account was a breeze, and I was quickly navigating through its features with ease. The simplicity of the app, coupled with its powerful functionalities, has made managing my money more convenient than ever."</p>
-                        </div>
-                        {/* <h2 className='debs'>OMOBOLANLE <br></br> ISREAL</h2> */}
-                    </Carousel.Caption>
-                    </Carousel.Item>
-                    <Carousel.Item>
-                        <div className="car-img">
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <div className="customer-text">
                             <img src="./Images/woman3.jpg" alt="" />
-                        </div>
-                    <Carousel.Caption>
-                        <div className="customer-subtext">
-                            <p>"From the moment I downloaded XtremPay, I was impressed by its user-friendly interface. Setting up my account was a breeze, and I was quickly navigating through its features with ease. The simplicity of the app, coupled with its powerful functionalities, has made managing my money more convenient than ever."</p>
-                        </div>
-                        {/* <h2 className='debs'>OMOBOLANLE <br></br> ISREAL</h2> */}
-                    </Carousel.Caption>
-                    </Carousel.Item>
-                </Carousel>
-                {/* <div className="customer-text">
-                    <img src="./Images/woman1.jpg" alt="" />
-                    <div className="customer-subtext">
-                        <p>"From the moment I downloaded XtremPay, I was impressed by its user-friendly interface. Setting up my account was a breeze, and I was quickly navigating through its features with ease. The simplicity of the app, coupled with its powerful functionalities, has made managing my money more convenient than ever."</p>
-                    </div>
-                    <h2 className='debs'>OMOBOLANLE <br></br> ISREAL</h2>
-                </div> */}
-
+                            <div className="customer-subtext">
+                                <p>“From the moment I downloaded XtremPay, I was impressed by its user-friendly interface. Setting up my account was a breeze, and I was quickly navigating through its features with ease. The simplicity of the app, coupled with its powerful functionalities, has made managing my money more convenient than ever”.</p>
+                            </div>
+                        </div> 
+                    </SwiperSlide>
+                </Swiper>
                 <img className="eeh" src="./Images/Rectangle 1.png" alt="" />
             </div>
             <div className="end-end" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1000">
@@ -226,10 +221,10 @@ function LandingPage () {
                     <h2>Become an Xtrempay Agent</h2>
                     <p>Enjoy 0%  charges on your transactions and also make free deposite and withdrawals</p>
                     <button>
-                        <img src="./Images/icons.png" alt="" />Contact to join Xtremepay
+                        <img src="./Images/whatsapp.png" alt="" />Contact to join Xtremepay
                     </button>
                     <button className='seg'>
-                        <img src="./Images/icons.png" alt="" />Send an Email
+                        <img src="./Images/whatsapp.png" alt="" />Send an Email
                     </button>
                 </div>
                 <img src="./Images/pos.png" alt="" />

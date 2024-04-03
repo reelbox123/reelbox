@@ -434,58 +434,18 @@ nav ul li {
   color:  #2F2F32;
   margin-bottom: 40px;
 }
-.carousel {
-  display: grid;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 70px;
-  flex-direction: row;
-  position: unset;
-}
-.carousel .carousel-item {
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
-  position: unset;
-}
-.carousel-caption {
-  position: unset;
-  background-color: #2475FB;
-  width: 40%;
-  padding: 120px 30px 120px 30px;
-  text-align: left;
-}
-.carousel-inner {
+.customer-text {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: row;
-  position: unset;
+  margin-bottom: 50px;
 }
-.carousel-inner .carousel-item  {
-  position: unset;
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
-}
-.carousel-inner .carousel-item .car-img{
-  width: 28%;
-}
-.carousel-inner .carousel-item .car-img img {
-  width: 100%;
-  height: 60vh;
+.customer-text img {
+  width: 30%;
+  height: 57vh;
   object-fit: cover;
 }
-/* .carousel  {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 70px;
-}
-.carousel-item img {
-  width: 30%;
-}
-.carousel .carousel-caption .customer-subtext {
+.customer-subtext {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -494,26 +454,23 @@ nav ul li {
   color: white;
   width: 40%;
 }
-.carousel-caption {
+.customer-subtext p {
+  padding: 110px 30px 110px 30px;
   width: 100%;
-}
-.carousel-caption p {
-  padding: 110px 30px 10px 30px;
-  width: 90%;
   font-size: 16px;
 }
-.carousel-inner {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
-/* .customers .debs {
+.customers .debs {
   right: 46%;
-  top: 50%;
+  top: 70%;
   position: absolute;
   color: white;
   font-weight: 500;
-} */
+  text-align: center;
+}
+.swiper {
+  width: 100%;
+  height: 100%;
+}
 .eeh {
   width: 50%;
 }
@@ -547,6 +504,7 @@ nav ul li {
   width: 47%;
   color: white;
   margin-bottom: 20px;
+  border: none;
 }
 .agent button img {
   width: 9%;
