@@ -23,29 +23,29 @@ function Moola () {
                         <div className="pass-feat1">
                             <img src="/Images/ph.png" alt="" />
                             <div className="pass-feat1-text">
-                                <h2>Contribution tracking</h2>
-                                <p>Passabi helps maintain transparency, assess contribution progress and demonstrate the growth and impact of group contributions</p>
+                                <h2>Prize-linked savings</h2>
+                                <p>Save and unlock the chance of winning cash prizes and lot of rewards.</p>
                             </div>                       
                         </div>
                         <div className="pass-feat1">
                             <img src="/Images/ph.png" alt="" />
                             <div className="pass-feat1-text">
-                                <h2>Joint Ownership</h2>
-                                <p>Allow all members of the group to have equal access and authority over their contributions, fostering trust and accountability within the group</p>
+                                <h2>Debit Cards</h2>
+                                <p>Experience  secured and seamless online and offline shopping experience </p>
                             </div>                       
                         </div>
                         <div className="pass-feat1">
                             <img src="/Images/ph.png" alt="" />
                             <div className="pass-feat1-text">
-                                <h2>Automated loans disbursement</h2>
-                                <p>Passabi streamlines the loan disbursement process of electronically transferiring loan funds to borrowers accounts without the need of manual process or intervention</p>
+                                <h2>Linked Account</h2>
+                                <p>Set goals, track spending, lock savings, earn interest and win cash prizes. the more you save the more your chances of entries into weekly drawing.</p>
                             </div>                       
                         </div>
                         <div className="pass-feat1">
                             <img src="/Images/ph.png" alt="" />
                             <div className="pass-feat1-text">
-                                <h2>Communication and Reminders</h2>
-                                <p>Passsabi provides communication tools and reminders to keep memebers informed about their contribution schedules and deadlines, helping them stay on track with their saving plans</p>
+                                <h2>Automated Savings Plan</h2>
+                                <p>Moola helps you save money without manual effort, promoting financial discipline.</p>
                             </div>                       
                         </div>
                     </div>

@@ -1,0 +1,39 @@
+.modalBackground {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 40%;
+    left: 5%;
+  }
+  .modalContainer button {
+    margin-right: 20px;
+    padding: 7px 17px;
+  }
+  .modalContainer {
+    flex-direction: column;
+    background-color: white;
+    padding: 25px;
+    box-shadow: 1px 1px 3px 1px gray;
+    border-radius: 12px;
+    width: 40%;
+  }
+  .modalContainer h1 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .modalContainer p {
+    margin-bottom: 20px;
+  }
+  #canc {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: rgb(165, 12, 12);
+    margin-right: 20px;
+    padding: 3px 15px;
+    border-radius: 5px;
+    color: white;
+  }
+  

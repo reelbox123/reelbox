@@ -1,6 +1,7 @@
 import Navbar from '../components/nav.jsx'
 import ContactTab from '../components/contactTab.jsx'
 import Footer from '../components/footer.jsx'
+import { ReactTyped } from "react-typed";
 function Passabi () {
     return (
         <>
@@ -9,7 +10,13 @@ function Passabi () {
                 <h1>PASSABI</h1>
             </div>
             <div className="passabi-text">
-                <h1>Redefining Ajo, Adashe, Esusu for small business owners.  Alternative for way to save and borrow money for  Micro, Small, and Medium Enterprises.</h1>
+                <h1>Redefining <ReactTyped
+                    strings={["Ajo", "Adashe", "Esusu",]}
+                    typeSpeed={100}
+                    backSpeed={140}
+                    loop
+                    >
+                    </ReactTyped> for small business owners.  Alternative for way to save and borrow money for  Micro, Small, and Medium Enterprises.</h1>
                 <p>Passabi offers seamless group savings and provide access to no interest loans for individual members that have come together to solve their money challenges. Digitalize rotating savings platform that is seamlessly integrates with commercial bank and fin-tech companies to offers access to secure and easy to use financial services</p>
             </div>
             <div className="details" id='pass-get' data-aos="fade-down" data-aos-easing="linear" data-aos-duration="2000">
@@ -54,29 +61,29 @@ function Passabi () {
                         <div className="pass-feat1">
                             <img src="/Images/ph.png" alt="" />
                             <div className="pass-feat1-text">
-                                <h2>Prize-linked savings</h2>
-                                <p>Save and unlock the chance of winning cash prizes and lot of rewards.</p>
+                                <h2>Contribution tracking</h2>
+                                <p>Passabi helps maintain transparency, assess contribution progress and demonstrate the growth and impact of group contributions</p>
                             </div>                       
                         </div>
                         <div className="pass-feat1">
                             <img src="/Images/ph.png" alt="" />
                             <div className="pass-feat1-text">
-                                <h2>Debit Cards </h2>
-                                <p>Experience  secured and seamless online and offline shopping experience </p>
+                                <h2>Joint Ownership</h2>
+                                <p>Allow all members of the group to have equal access and authority over their contributions, fostering trust and accountability within the group</p>
                             </div>                       
                         </div>
                         <div className="pass-feat1">
                             <img src="/Images/ph.png" alt="" />
                             <div className="pass-feat1-text">
-                                <h2>Linked Account</h2>
-                                <p>Set goals, track spending, lock savings, earn interest and win cash prizes. the more you save the more your chances of entries into weekly drawing.</p>
+                                <h2>Automated loans disbursement</h2>
+                                <p>Passabi streamlines the loan disbursement process of electronically transferiring loan funds to borrowers accounts without the need of manual process or intervention</p>
                             </div>                       
                         </div>
                         <div className="pass-feat1">
                             <img src="/Images/ph.png" alt="" />
                             <div className="pass-feat1-text">
-                                <h2>Automated Savings Plan</h2>
-                                <p>Moola helps you save money without manual effort, promoting financial discipline.</p>
+                                <h2>Communication and Reminders</h2>
+                                <p>Passsabi provides communication tools and reminders to keep memebers informed about their contribution schedules and deadlines, helping them stay on track with their saving plans</p>
                             </div>                       
                         </div>
                     </div>

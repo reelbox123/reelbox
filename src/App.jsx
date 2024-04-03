@@ -6,6 +6,7 @@ import Passabi from './pages/Passabi';
 import FAQ from './pages/Faq.jsx';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 AOS.init();
 function App() {
 

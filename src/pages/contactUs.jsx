@@ -1,7 +1,14 @@
+import { useState } from 'react';
 import Navbar from '../components/nav.jsx'
 import ContactTab from '../components/contactTab.jsx'
 import Footer from '../components/footer.jsx'
+import XtremModalTab  from '../components/xtremModalTab.jsx';
+import MoolaModalTab from '../components/moolaModalTab.jsx';
+import PassabiModalTab from '../components/passabiModalTab.jsx';
 function ContactUs () {
+    const [openModal, setOpenModal]  = useState(false)
+    const [openMoolaModal, setOpenMoolaModal]  = useState(false)
+    const [openPassabiModal, setOpenPassabiModal]  = useState(false)
     return (
         <>
             <Navbar />
@@ -10,11 +17,14 @@ function ContactUs () {
             </div>
             <div className="contacts-links">
                 <ul>
-                    <li><a href="/home">Xtremepay</a></li>
-                    <li><a className='m-link' href="/moola">Moola</a></li>
-                    <li><a href="/passabi">Passabi</a></li>
+                    <li><button onClick={() => setOpenModal(true)} type='submit'>Xtrempay</button></li>
+                    <li><button onClick={() => setOpenMoolaModal(true)} type='submit' className='m-link'>Moola</button></li>
+                    <li><button onClick={() => setOpenPassabiModal(true)}  type='submit'>Passabi</button></li>
                 </ul>
             </div>
+            {openModal && <XtremModalTab closeModal={setOpenModal}/> }
+            {openMoolaModal && <MoolaModalTab closeModal={setOpenMoolaModal}/> }
+            {openPassabiModal && <PassabiModalTab closeModal={setOpenPassabiModal}/> }
             <div className="contact-support">
                 <h1>Contact Support</h1>
                 <p>Fill in the required information below and an Xtrempay representative will get in touch.</p>

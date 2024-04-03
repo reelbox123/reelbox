@@ -1,7 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+body {
+  font-family: "Poppins", sans-serif;
+}
 nav { 
   display: flex;
   justify-content: space-between;
@@ -26,7 +28,7 @@ nav ul li a:hover {
   z-index: 1000;
   box-shadow: 2px 1px 2px 1px rgb(204, 204, 204);
   padding: 10px;
-  padding: 0px 40px 0px 40px;
+  padding: 0px 20px 0px 20px;
 }
 .nav-logo {
   width: 20%;
@@ -74,8 +76,8 @@ nav ul li {
 }
 .header-text button {
   background-color: #FE9226;
-  padding: 10px 15px 10px 15px;
-  font-size: 13px;
+  padding: 10px 9px 10px 9px;
+  font-size: 11px;
   border-radius: 5px;
   color: white;
 }
@@ -134,8 +136,11 @@ nav ul li {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-image: url("../public/Images/Frame 630458.png");
-  padding: 15px 100px;
+  /* background-color: #FF9227; */
+  background-image: url('/Images/Frame 630458.png');
+  background-position: center;
+  background-size: cover;
+  padding: 5px 100px;
   color: white;
 }
 .join .join1 {
@@ -144,7 +149,7 @@ nav ul li {
 .join h2 {
   font-size: 32px;
   font-weight: 500;
-  margin-right: 30px;
+  margin-right: 10px;
   font-family: sans-serif;
 }
 .join-im {
@@ -154,12 +159,19 @@ nav ul li {
 }
 .join-im img {
   width: 1%;
-  margin-left: 0px;
-  height: 14vh;
+  margin-left: 130px;
+  height: 17vh;
 }
 .join-im-text {
-  width: 150%;
-  padding-right: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  padding-right: 20px;
+}
+.join-im-text p {
+  width: 100%;
 }
 .details {
   display: flex;
@@ -247,7 +259,8 @@ nav ul li {
   padding: 20px;
   margin-right: 10px;
   width: 18%;
-  background-color: #FE9226;
+  background-color: white;
+  color: black;
   border-radius: 10px;
 }
 .ideas-sub img {
@@ -259,7 +272,6 @@ nav ul li {
 }
 .transfer h2 {
   margin-left: 10px;
-  color: white;
   font-size: 17px;
   font-weight: 600;
 }
@@ -269,20 +281,27 @@ nav ul li {
   font-size: 12px;
   margin-left: 10px;
   margin-top: 10px;
-  color: white;
 }
 #sub-t {
   background-color: white;
 }
-#sub-t .transfer h2 {
+/* #sub-t .transfer h2 {
   color: black;
-}
-#sub-t p {
+} */
+/* #sub-t p {
   color: black;
+} */
+#sub-t:hover {
+  background-color: #2E2E2E;
 }
 .transfer img {
   width: 1.5%;
   height: 4vh;
+}
+.ideas-sub:hover {
+  background-color: #2E2E2E;
+  cursor: pointer;
+  color: white;
 }
 .services {
   background-color: #FE9226;
@@ -312,7 +331,12 @@ nav ul li {
   margin-bottom: 20px;
 }
 .services-text img {
-  width: 23%;
+  width: 20%;
+  transition: all 1s ease;
+
+}
+.services-text img:hover {
+  transform: scale(1.1);
 }
 #ss {
   margin-left: 0px;
@@ -321,6 +345,11 @@ nav ul li {
   color: white;
   width: 35%;
   margin-left: 80px;
+  background-image: url('/Images/Group 12.png');
+  background-position: center;
+  background-size: 55%;
+  backdrop-filter: blur(50px);
+  background-repeat: no-repeat;
 }
 .service-subtext h3 {
   font-size: 20px;
@@ -338,12 +367,15 @@ nav ul li {
   justify-content: left;
   align-items: center;
   color: black;
-  width: 23%;
-  font-size: 14px;
+  width: 21%;
+  font-size: 12px;
   border-radius: 5px;
   background-color: white;
-  padding: 10px;
+  padding: 9px 3px 9px 9px;
   font-weight: 500;
+}
+.service-subtext button a {
+  display: flex;
 }
 .services .rec {
   width: 60%;
@@ -402,16 +434,58 @@ nav ul li {
   color:  #2F2F32;
   margin-bottom: 40px;
 }
-.customer-text  {
+.carousel {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 70px;
+  flex-direction: row;
+  position: unset;
+}
+.carousel .carousel-item {
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  position: unset;
+}
+.carousel-caption {
+  position: unset;
+  background-color: #2475FB;
+  width: 40%;
+  padding: 120px 30px 120px 30px;
+  text-align: left;
+}
+.carousel-inner {
   display: flex;
   justify-content: center;
-  align-self: center;
+  align-items: center;
+  flex-direction: row;
+  position: unset;
+}
+.carousel-inner .carousel-item  {
+  position: unset;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+.carousel-inner .carousel-item .car-img{
+  width: 28%;
+}
+.carousel-inner .carousel-item .car-img img {
+  width: 100%;
+  height: 60vh;
+  object-fit: cover;
+}
+/* .carousel  {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 70px;
 }
-.customer-text img {
-  width: 35%;
+.carousel-item img {
+  width: 30%;
 }
-.customer-subtext {
+.carousel .carousel-caption .customer-subtext {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -420,28 +494,26 @@ nav ul li {
   color: white;
   width: 40%;
 }
-.customer-text p {
-  padding: 110px 30px 10px 30px;
+.carousel-caption {
   width: 100%;
+}
+.carousel-caption p {
+  padding: 110px 30px 10px 30px;
+  width: 90%;
   font-size: 16px;
 }
-.customer-subtext .switch img {
-  width: 6.5%;
-  margin-right: 5px;
-}
-.switch {
+.carousel-inner {
   display: flex;
-  justify-content: flex-end;
-  padding: 20px;
-  width: 100%;
-}
-.customers .debs {
+  justify-content: center;
+  align-items: center;
+} */
+/* .customers .debs {
   right: 46%;
-  top: 66%;
+  top: 50%;
   position: absolute;
   color: white;
   font-weight: 500;
-}
+} */
 .eeh {
   width: 50%;
 }
@@ -454,23 +526,17 @@ nav ul li {
 }
 .agent h2 {
   font-size: 40px;
-  font-weight: bold;
+  font-weight: 500;
   color: #2F2F32;
+  width: 80%;
   margin-bottom: 10px;
-  font-family: "Space Grotesk", sans-serif;
-
+  font-family: "Poppins", sans-serif;
 }
 .agent p {
-  color: rgb(167, 163, 163);
+  color: rgb(15, 15, 15);
   font-size: 15px;
   width: 90%;
   margin-bottom: 30px;
-}
-.agent h3 {
-  font-size: 30px;
-  width: 80%;
-  line-height: 40px;
-  margin-bottom: 20px;
 }
 .agent button {
   display: flex;
@@ -478,19 +544,19 @@ nav ul li {
   background-color: #FF9227;
   padding: 10px 1px 10px 30px;
   border-radius: 25px;
-  width: 55%;
+  width: 47%;
   color: white;
   margin-bottom: 20px;
 }
 .agent button img {
   width: 9%;
-  margin-right: 9px;
+  margin-right: 10px;
 }
 .agent img {
-  width: 38%;
-  background-image: url("../public/Images/Group 12.png");
+  width: 33%;
+  background-image: url("../public/Images/Group 11.png");
   background-position: left;
-  background-size: 30vw;
+  background-size: 25vw;
   background-repeat: no-repeat;
 }
 .contact {
@@ -539,6 +605,11 @@ nav ul li {
 }
 .social-links img {
   width: 13%;
+}
+.c-p {
+  text-align: center;
+  padding: 20px 50px 50px 40px;
+  font-size: 14px;
 }
 footer {
   display: flex;
@@ -636,6 +707,7 @@ footer {
   color: white;
   margin-top: 20px;
   font-weight: normal;
+  font-size: 13px;
 }
 
 .rec {
@@ -822,6 +894,13 @@ footer {
 }
 .pass-feat-val img {
   width: 22%;
+  /* background-image: url('/public/Images/Group 10.png');
+  background-position: center;
+  background-size: cover; */
+  transition: all 1s ease;
+}
+.pass-feat-val img:hover {
+  transform: scale(1.1);
 }
 .pass-feat-val1 {
   display: flex;
@@ -831,21 +910,22 @@ footer {
 .pass-feat1 {
   display: flex;
   margin-left: 70px;
+  margin-bottom: 15px;
 }
 .pass-feat1 img {
-  margin-top: 7px;
+  margin-top: 3px;
   margin-right: 10px;
-  width: 5%;
+  width: 6%;
   height: 4vh;
 }
 .pass-feat1 h2 {
-  font-size: 20px;
-  font-weight: 500;
+  font-size: 16px;
+  font-weight: 600;
 }
 .pass-feat1 p {
   margin-top: 5px;
   color: #717177;
-  font-size: 14px;
+  font-size: 13px;
   width: 90%;
   margin-bottom: 20px;
 }
@@ -855,6 +935,8 @@ footer {
 .moola-signup-text .m-p {
   margin-top: 0px;
   margin-bottom: 20px;
+  width: 50%;
+  font-size: 13px;
 }
 .playstore {
   display: flex;
@@ -893,12 +975,15 @@ footer {
   padding-bottom: 20px;
   border-bottom: 1px solid #eeeef1;
 }
+.faq-pass-text1 {
+  margin-top: 20px;
+}
 .faq1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
 }
 #faq-x {
   flex-direction: column;

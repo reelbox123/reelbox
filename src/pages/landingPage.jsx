@@ -1,6 +1,7 @@
 import Navbar from '../components/nav.jsx'
 import ContactTab from '../components/contactTab.jsx'
 import Footer from '../components/footer.jsx'
+import Carousel from 'react-bootstrap/Carousel';
 
 function LandingPage () {
     return (
@@ -13,12 +14,12 @@ function LandingPage () {
                     <button type="button">DOWNLOAD APP</button>
                 </div>
                 <div className="header-img">
-                    <img src="./Images/hh.png" alt="" />
+                    <img src="./Images/Frame 630906.png" alt="" />
                 </div>
                 <div className="header-subtext">
                     <img src="./Images/Frame 630367.png" alt="" />
                     <h2>290K +</h2>
-                    <h4>Happy Customers Using XtremePay</h4>
+                    <h4>Happy Customers Using XtremPay</h4>
                     <p>4.9 <span className="five">/5</span></p>
                     <div className="star">
                         <img src="./Images/Frame 630368.png" alt="" /><span>(Ratings)</span>
@@ -35,7 +36,7 @@ function LandingPage () {
                     <div className="join-im">
                         <div className="join-im-text">
                             <h2>20,000</h2>
-                            <p>People joined Xtremepay</p>
+                            <p>People joined Xtrempay</p>
                         </div>
                         <img src="./Images/Line 1.png" alt="" />
                     </div>
@@ -99,7 +100,7 @@ function LandingPage () {
                     <div className="ideas-sub">
                         <img src="./Images/Frame 630500.png" alt="" />
                         <div className="transfer">
-                            <img src="./Images/Line 1.png" alt="" id='l' />
+                            <img src="./Images/Line 6.png" alt="" />
                             <h2>Transfer</h2>
                         </div>
                         <p>Need to send money to a friend, family member, or colleague? XRemPay's money transfer feature is your go-to solution It allows more transfer.</p>
@@ -147,7 +148,7 @@ function LandingPage () {
                         <h2>Moola</h2>
                         <h3>Save with Excitement Save  and Win Up to 10M weekly</h3>
                         <p>Moola is a financial app that offers prize linked account as an alternative to traditional interest based savings. Moola offers people an exceptional and exciting chance of wining a cash prize in return for saving money into Moola account.</p>
-                        <button type="button">SEE MORE <img src="./Images/ic.png" alt="" /></button>
+                        <button type="button"><a href="/moola">SEE MORE <img src="./Images/ic.png" alt="" /></a></button>
                     </div>
                 </div>
                 <img className="rec" src="./Images/rec.png" alt="" />
@@ -156,24 +157,56 @@ function LandingPage () {
                         <h2>Passabi</h2>
                         <h3>Made for Small Business Owners</h3>
                         <p>Passabi offers seamless group savings and provide access to no interest loans for individual members that have come together to solve their money challenges. Digitalize rotating savings platform that is seamlessly integrates with commercial bank and fin-tech companies to offers access to secure and easy to use financial services</p>
-                        <button type="button">SEE MORE <img src="./Images/ic.png" alt="" /></button>
+                        <button type="button"><a href="/passabi">SEE MORE <img src="./Images/ic.png" alt="" /></a></button>
                     </div>
                     <img src="./Images/Group 40.png" alt="" />
                 </div>
             </div>
             <div className="customers">
                 <h2>Here is what our customers think</h2>
-                <div className="customer-text">
-                    <img src="./Images/woman.png" alt="" />
+                <Carousel className='main-carousel'>
+                    <Carousel.Item>
+                        <div className="car-img">
+                            <img src="./Images/woman1.jpg" alt="" />
+                        </div>
+                    <Carousel.Caption>
+                        <div className="customer-subtext">
+                            <p>"From the moment I downloaded XtremPay, I was impressed by its user-friendly interface. Setting up my account was a breeze, and I was quickly navigating through its features with ease. The simplicity of the app, coupled with its powerful functionalities, has made managing my money more convenient than ever."</p>
+                        </div>
+                        {/* <h2 className='debs'>OMOBOLANLE <br></br> ISREAL</h2> */}
+                    </Carousel.Caption>
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        <div className="car-img">
+                            <img src="./Images/woman2.jpg" alt="" />
+                        </div>
+                    <Carousel.Caption>
+                        <div className="customer-subtext">
+                            <p>"From the moment I downloaded XtremPay, I was impressed by its user-friendly interface. Setting up my account was a breeze, and I was quickly navigating through its features with ease. The simplicity of the app, coupled with its powerful functionalities, has made managing my money more convenient than ever."</p>
+                        </div>
+                        {/* <h2 className='debs'>OMOBOLANLE <br></br> ISREAL</h2> */}
+                    </Carousel.Caption>
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        <div className="car-img">
+                            <img src="./Images/woman3.jpg" alt="" />
+                        </div>
+                    <Carousel.Caption>
+                        <div className="customer-subtext">
+                            <p>"From the moment I downloaded XtremPay, I was impressed by its user-friendly interface. Setting up my account was a breeze, and I was quickly navigating through its features with ease. The simplicity of the app, coupled with its powerful functionalities, has made managing my money more convenient than ever."</p>
+                        </div>
+                        {/* <h2 className='debs'>OMOBOLANLE <br></br> ISREAL</h2> */}
+                    </Carousel.Caption>
+                    </Carousel.Item>
+                </Carousel>
+                {/* <div className="customer-text">
+                    <img src="./Images/woman1.jpg" alt="" />
                     <div className="customer-subtext">
                         <p>"From the moment I downloaded XtremPay, I was impressed by its user-friendly interface. Setting up my account was a breeze, and I was quickly navigating through its features with ease. The simplicity of the app, coupled with its powerful functionalities, has made managing my money more convenient than ever."</p>
-                        <div className="switch">
-                            <img src="./Images/Frame 630495.png" alt="" />
-                            <img src="./Images/Frame 630494.png" alt="" />
-                        </div>
                     </div>
-                </div>
-                <h2 className='debs'>OMOBOLANLE <br></br> ISREAL</h2>
+                    <h2 className='debs'>OMOBOLANLE <br></br> ISREAL</h2>
+                </div> */}
+
                 <img className="eeh" src="./Images/Rectangle 1.png" alt="" />
             </div>
             <div className="end-end" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1000">
@@ -190,14 +223,13 @@ function LandingPage () {
             </div>
             <div className="agent" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
                 <div className="agent-text">
-                    <h2>BECOME AN AGENT</h2>
-                    <p>The easiest and reliable way of providing affordable financial service in Africa</p>
-                    <h3>Join us and grow your business fast</h3>
+                    <h2>Become an Xtrempay Agent</h2>
+                    <p>Enjoy 0%  charges on your transactions and also make free deposite and withdrawals</p>
                     <button>
-                        <img src="./Images/arcticons.png" alt="" />Contact to join Xtremepay
+                        <img src="./Images/icons.png" alt="" />Contact to join Xtremepay
                     </button>
                     <button className='seg'>
-                        <img src="./Images/whatsapp-call.png" alt="" />Send and Email
+                        <img src="./Images/icons.png" alt="" />Send an Email
                     </button>
                 </div>
                 <img src="./Images/pos.png" alt="" />

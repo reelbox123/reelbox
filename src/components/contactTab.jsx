@@ -2,7 +2,7 @@ function ContactTab () {
     return (
         <>
             <hr className="contact-hr" />
-             <section>
+            <section>
                 <div className="contact">
                     <div className="xtreme-contact">
                         <img src="Images/XTREMPAY.png" alt="" />
@@ -25,7 +25,11 @@ function ContactTab () {
                         <img src="/Images/Frame 630354.png" alt="" />
                         <img src="/Images/Frame 630355.png" alt="" />
                         <img src="/Images/Frame 630357.png" alt="" />
+                        <img src="/Images/xt.png" alt="" />
                     </div>
+                </div>
+                <div className="c-p">
+                    <p>Xtrempay and featured customers are financial technology companies and not a bank. Banking services are provided by our partner banks who are duly licensed by the CBN.</p>
                 </div>
             </section>
         </>
