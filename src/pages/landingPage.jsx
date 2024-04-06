@@ -152,7 +152,7 @@ function LandingPage () {
                         <h2>Moola</h2>
                         <h3>Save with Excitement Save  and Win Up to 10M weekly</h3>
                         <p>Moola is a financial app that offers prize linked account as an alternative to traditional interest based savings. Moola offers people an exceptional and exciting chance of wining a cash prize in return for saving money into Moola account.</p>
-                        <button type="button"><a href="/moola">SEE MORE <img src="./Images/ic.png" alt="" /></a></button>
+                        <button type="button" className='animate-bounce'><a href="/moola">SEE MORE <img src="./Images/ic.png" alt="" /></a></button>
                     </div>
                 </div>
                 <img className="rec" src="./Images/rec.png" alt="" />
@@ -161,7 +161,7 @@ function LandingPage () {
                         <h2>Passabi</h2>
                         <h3>Made for Small Business Owners</h3>
                         <p>Passabi offers seamless group savings and provide access to no interest loans for individual members that have come together to solve their money challenges. Digitalize rotating savings platform that is seamlessly integrates with commercial bank and fin-tech companies to offers access to secure and easy to use financial services</p>
-                        <button type="button"><a href="/passabi">SEE MORE <img src="./Images/ic.png" alt="" /></a></button>
+                        <button type="button" className='animate-bounce'><a href="/passabi">SEE MORE <img src="./Images/ic.png" alt="" /></a></button>
                     </div>
                     <img src="./Images/Group 40.png" alt="" />
                 </div>
