@@ -1,235 +1,268 @@
+import { useState } from 'react';
 import Navbar from '../components/nav.jsx'
-import ContactTab from '../components/contactTab.jsx'
 import Footer from '../components/footer.jsx'
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+// import { Swiper, SwiperSlide } from 'swiper/react';
+// import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
+import { ReactTyped } from "react-typed";
+import ProgressBar from "@ramonak/react-progress-bar";
 
 function LandingPage () {
+    const [openModal, setOpenModal]  = useState(false);
     return (
         <>
             <Navbar/>
-            <div className="header" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
-                <div className="header-text">
-                    <h1>Do More with Xtrem<span className="p">pay</span></h1>
-                    <p>Empower yourself with lightning-fast transactions. Whether it's transferring funds, paying bills, or managing standing orders. Explore the uncommon possibilities of digital banking</p>
-                    <button type="button">DOWNLOAD APP</button>
-                </div>
-                <div className="header-img">
-                    <img src="./Images/Frame 630906.png" alt="" />
-                </div>
-                <div className="header-subtext">
-                    <img src="./Images/Frame 630367.png" alt="" />
-                    <h2>290K +</h2>
-                    <h4>Happy Customers Using XtremPay</h4>
-                    <p>4.9 <span className="five">/5</span></p>
-                    <div className="star">
-                        <img src="./Images/Frame 630368.png" alt="" /><span>(Ratings)</span>
-                    </div>
-                    <h3>Download at</h3>
-                    <div className="ggle">
-                        <img src="./Images/googleplay.png" alt="" />
-                        <img src="./Images/appstore.png" alt="" />
-                    </div>
+            <div className="header flex justify-center pt-[170px] pr-[100px] pb-[150px] pl-[80px] items-center text-black bg-[#878e99] sm:pr-[30px] sm:pl-[30px] lg:pr-[100px] lg:pl-[80px]" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+                <div className="w-[150%] text-left sm:w-[100%] sm:text-center md:text-left lg:text-left">
+                    <h2 className="tracking-widest mb-4 text-[20px] sm:text-[17px] md:text-[20px]">WELCOME TO MY WORLD</h2>
+                    <h1 className='text-[50px] font-bold mb-[10px] text-[#ff014f] sm:text-[30px] md:text-[50px]'>Hi, I'm Emeka <span className='text-[#ff014f]'>Kalu</span></h1>
+                    <h1 className='text-[50px] font-bold mb-[10px] text-[#1e2125] sm:text-[30px] md:text-[50px]'>a <span className='text-[#ff014f]'>
+                        <ReactTyped
+                        strings={["Front-End Developer.", "Freelancer.", "Website Desginer.", "Graphic Designer.",]}
+                        typeSpeed={50}
+                        backSpeed={30}
+                        loop
+                        >
+                        </ReactTyped>
+                    </span></h1>
+                    <p className='w-[40%] text-[#3c3e41] text-bold text-[18px] mb-7 sm:text-[16px] sm:w-[100%] md:w-[70%] lg:w-[40%]'>Based in Nigeria, I'm a Proven success in boosting website performance and stability through regular maintenance and troubleshooting.</p>
+                    <button className='flex justify-center items-center p-[10px] rounded-md text-[13px] text-center font-medium shadow-md text-white hover:bg-[#ff014f] hover:text-white bg-[#878e99] animate-bounce sm:w-full md:w-[30%] lg:w-[20%]' type="button"><a href="#contact">Contact Me</a></button>
                 </div>
             </div>
-            <div className="join">
-                <div className="join1">
-                    <div className="join-im">
-                        <div className="join-im-text">
-                            <h2>20,000</h2>
-                            <p>People joined Xtrempay</p>
-                        </div>
-                        <img src="./Images/Line 1.png" alt="" />
+            <section id="features" className='bg-[#E4E4E4] p-20 sm:p-[25px] md:p-[25px] lg:p-20'  data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+                <h1 className='text-[#ff014f] text-thin text-[20px]'>FEATURES</h1>
+                <h2 className='text-[60px] text-[#3c3e41] font-bold mt-2 sm:text-[40px] md:text-[50px] lg:text-[60px]'>What I Do</h2>
+                <div className="grid grid-cols-3 gap-4 mt-20 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                    <div className="shadow-lg rounded-lg p-12 w-[100%] sm:p-[20px] md:p-[35px] lg:p-12 sm:w-[100%] md:w-[100%] lg:w-[100%]">
+                        <img src="./Images/monitor.png" className='m w-[20%] mb-4 text-white' alt="" />
+                        <h1 className='text-[25px]'>Web Development</h1>
+                        <p className='text-[17px] w-[108%] mt-4 sm:text-[14px] md:text-[17px] lg:text-[17px]'>I build outstanding websites, user friendly and responsive design making users to have an outsanding experience</p>
+                    </div>
+                    <div className=" shadow-lg p-12 rounded-lg w-[100%] sm:p-[20px] md:p-[35px] lg:p-12 md:w-[100%] lg:w-[100%]">
+                        <img src="./Images/graphic-design.png" className='m w-[20%] mb-4 text-white' alt="" />
+                        <h1 className='text-[25px]'>Web Designing</h1>
+                        <p className='text-[17px] w-[108%] mt-4 sm:text-[14px] md:text-[17px] lg:text-[17px]'>Designing incredible websites template, for users to implement easily without struggling with the codes</p>
+                    </div>
+                    <div className=" shadow-lg p-12 w-[100%] rounded-lg sm:p-[20px] md:p-[35px] lg:p-12 md:w-[100%] lg:w-[100%]">
+                        <img src="./Images/camera.png" className='m w-[20%] mb-4 text-white' alt="" />     
+                        <h1 className='text-[25px]'>Photo Editing</h1>
+                        <p className='text-[17px] w-[108%] mt-4 sm:text-[14px] md:text-[17px] lg:text-[17px]'>In depth understanding on photo editing using Photoshop, enabling the quality and color enhancement</p>
+                    </div>
+                    <div className=" shadow-lg p-12 w-[100%] rounded-lg sm:p-[20px] md:p-[35px] lg:p-12 md:w-[100%] lg:w-[100%]">
+                        <img src="./Images/expertise.png" className='m w-[20%] mb-4 text-white' alt="" />
+                        <h1 className='text-[25px]'>Business Strategy</h1>
+                        <p className='text-[18px] w-[108%] mt-4 sm:text-[14px] md:text-[17px] lg:text-[17px]'>Have knowledge and ideas on business startup and planning, also giving solutions to business</p>
+                    </div>
+                    <div className=" shadow-lg p-12 w-[100%] rounded-lg sm:p-[20px] md:p-[35px] lg:p-12 md:w-[100%] lg:w-[100%]">
+                        <img src="./Images/drawing.png" className='m w-[20%] mb-4 text-white' alt="" />
+                        <h1 className='text-[25px]'>Graphic Designing</h1>
+                        <p className='text-[18px] w-[108%] mt-4 sm:text-[14px] md:text-[17px] lg:text-[17px]'>Intensive Understanding on graphic designs, using Corel-Draw to implement users personal designs</p>
+                    </div>
+                    <div className=" shadow-lg p-12 w-[100%] rounded-lg sm:p-[20px] md:p-[35px] lg:p-12 md:w-[100%] lg:w-[100%]">
+                        <img src="./Images/self-employed.png" className='m w-[20%] mb-4 text-white' alt="" />
+                        <h1 className='text-[25px]'>Freelancing</h1>
+                        <p className='text-[18px] w-[108%] mt-4 sm:text-[14px] md:text-[17px] lg:text-[17px]'>Taking multiple projects with different clients, can also work on specfic projects</p>
                     </div>
                 </div>
-                <div className="join1">
-                    <div className="join-im">
-                        <div className="join-im-text">
-                            <h2>10,000</h2>
-                            <p>Reviews from googleplay</p>
+            </section>
+            <hr className="hh"/>
+            <section id='skills' className='bg-[#E4E4E4] p-20 sm:p-[25px] md:p-[25px] lg:p-20'  data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+                <h1 className='text-[#ff014f] text-thin text-[20px]'>EXPERIENCE</h1>
+                <h2 className='text-[60px] text-[#3c3e41] font-bold mt-2 sm:text-[40px] md:text-[50px] lg:text-[60px]'>Skills</h2>
+                <div className="grid grid-cols-2 gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
+                    <div className="">
+                        <div className='w-full mt-10'>
+                            <h1 className='mb-3 text-[20px]'>HTML5</h1>
+                            <ProgressBar bgColor='#3e64ff' width='100%' completed="100" maxCompleted={100}></ProgressBar>
                         </div>
-                        <img src="./Images/Line 1.png" alt="" />
-                    </div>
-                </div>
-                <div className="join1">
-                    <h2>1M+</h2>
-                    <p>Transactions in one day</p>
-                </div>
-            </div>
-            <div className="details"  data-aos="fade-down" data-aos-easing="linear" data-aos-duration="2000">
-                <div className="details-text-1">
-                    <h2>Why you must use Xtrempay</h2>
-                    <img className="ii" src="./Images/Vector 1.png" alt="" />
-                    <div className="ggles">                                                         
-                        <img src="./Images/googleplay.png" alt="" />
-                        <img src="./Images/appstore.png" alt="" />
-                    </div>
-                </div>
-                <div className="details-text">
-                    <div className="details-text1">
-                        <div className="details-text" id="t1">
-                            <h1>01</h1>
-                            <h2>Secure Gateway</h2>
-                            <p>Your journey begins with a fortress of security.Our state-of-the-art encryption technology ensures that your data is shielded from prying eyes. Feel the confidence as you pass through the secure gateway, knowing that your financial well-being is our top priority.</p>
+                        <div className='w-full mt-10'>
+                            <h1 className='mb-3 text-[20px]'>CSS3</h1>
+                            <ProgressBar bgColor='#3e64ff' width='100%' completed="100" maxCompleted={100} ></ProgressBar>
                         </div>
-                        <div className="details-text">
-                            <h1>02</h1>
-                            <h2>Supercharged Transactions</h2>
-                            <p>Empower yourself with lightning-fast transactions. Whether it's transferring funds, paying bills, or managing standing orders, our hero session accelerates your financial activities. Your time is precious, and we're here to make every transaction swift and secure.</p>
+                    </div>      
+                    <div className="">
+                        <div className='w-full mt-10'>
+                            <h1 className='mb-3 text-[20px]'>Photoshop</h1>
+                            <ProgressBar bgColor='#3e64ff' width='100%' completed="70" maxCompleted={100}></ProgressBar>
                         </div>
-                    </div>
-                    <div className="details-text2">
-                        <div className="details-text" id="t1">
-                            <h1>03</h1>
-                            <h2>Savings Sidekick</h2>
-                            <p>Meet your savings sidekick – a robust suite of tools designed to help you achieve your financial goals. Set up savings goals, track your progress, and receive personalized tips on optimizing your budget. Your hero session extends beyond transactions; it's a financial ally on your journey to prosperity.</p>
+                        <div className='w-full mt-10'>
+                            <h1 className='mb-3 text-[20px]'>CorelDraw</h1>
+                            <ProgressBar bgColor='#3e64ff' width='100%' completed="50" maxCompleted={100} ></ProgressBar>
                         </div>
-                        <div className="details-text">
-                            <h1>04</h1>
-                            <h2>Guardian Alerts</h2>
-                            <p>Rest easy with our guardian alerts that keep you informed and protected. Receive real-time notifications for account activity, unusual transactions, or impending due dates. Your hero session comes with a built-in guardian, ensuring your financial fortress remains vigilant.</p>
+                    </div>      
+                    <div className="">
+                        <div className='w-full mt-10'>
+                            <h1 className='mb-3 text-[20px]'>REACT</h1>
+                            <ProgressBar bgColor='#3e64ff' width='100%' completed="90" maxCompleted={100}></ProgressBar>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div className="ideas">
-                <div className="ideas-text" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1000">
-                    <h2>What can you do with Xtrempay</h2>
-                    <p>Do not worry, we are here to make you smile. By offering you reliable financial service such as cash withdrawal, Money transfer, Bill payment, Airtime top up, Account opening and loan support.</p>
-                </div>
-                <div className="ideas-subtext" data-aos="fade-left">
-                    <div className="ideas-sub">
-                        <img src="./Images/Frame 630500.png" alt="" />
-                        <div className="transfer">
-                            <img src="./Images/Line 6.png" alt="" />
-                            <h2>Transfer</h2>
+                        <div className='w-full mt-10'>
+                            <h1 className='mb-3 text-[20px]'>TAILWIND CSS</h1>
+                            <ProgressBar bgColor='#3e64ff' width='100%' completed="90" borderRadius="10px" maxCompleted={100} ></ProgressBar>
                         </div>
-                        <p>Need to send money to a friend, family member, or colleague? XRemPay's money transfer feature is your go-to solution It allows more transfer.</p>
-                    </div>
-                    <div className="ideas-sub" id='sub-t'>
-                        <img src="/Images/vaadin.png" alt="" />
-                        <div className="transfer">
-                            <img src="./Images/Line 6.png" alt="" />
-                            <h2>Withdrawals</h2>
+                    </div>  
+                    <div className="">
+                        <div className='w-full mt-10'>
+                            <h1 className='mb-3 text-[20px]'>BOOTSTRAP</h1>
+                            <ProgressBar bgColor='#3e64ff' width='100%' completed="90" maxCompleted={100}></ProgressBar>
                         </div>
-                        <p>Xtrempay allows you to withdraw money conveniently, ensuring that you have access to your funds whenever and wherever you need them.</p>
-                    </div>
-                    <div className="ideas-sub" id='sub-t'>
-                        <img src="./Images/fluent.png" alt="" id='l' />
-                        <div className="transfer">
-                            <img src="./Images/Line 6.png" alt="" />
-                            <h2>Payments</h2>
+                        <div className='w-full mt-10'>
+                            <h1 className='mb-3 text-[20px]'>SASS</h1>
+                            <ProgressBar bgColor='#3e64ff' width='100%' completed="90" borderRadius="10px" maxCompleted={100} ></ProgressBar>
                         </div>
-                        <p>Whether you're settling bills, making purchases, or paying for services, Xtrempay simplifies the payment processc It helps in easy pay off.</p>
-                    </div>
-                    <div className="ideas-sub" id='sub-t'>
-                        <img src="./Images/savings.png" alt="" />
-                        <div className="transfer">
-                            <img src="./Images/Line 6.png" alt="" id='l'/>
-                            <h2>Savings</h2>
-                        </div>
-                        <p>Remember, every penny saved is a step closer to your dreams. Start small, be consistent, and witness the compounding effect of financial discipline</p>
-                    </div>
-                    <div className="ideas-sub" id='sub-t'>
-                        <img src="./Images/Vector.png" alt="" />
-                        <div className="transfer">
-                            <img src="./Images/Line 6.png" alt="" />
-                            <h2>Cash prizes</h2>
-                        </div>
-                        <p>Remember, every penny saved is a step closer to your dreams. Start small, be consistent, and witness the compounding effect of financial discipline</p>
-                    </div>
-                </div>
-            </div>
-            <div className="services">
-                <h2>Services we are offering</h2>
-                <img src="./Images/Vector 3.png" alt="" />
-                <div className="services-text" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1000">
-                    <img src="./Images/Group 38.png" alt="" />                                                                                                                   
-                    <div className="service-subtext">
-                        <h2>Moola</h2>
-                        <h3>Save with Excitement Save  and Win Up to 10M weekly</h3>
-                        <p>Moola is a financial app that offers prize linked account as an alternative to traditional interest based savings. Moola offers people an exceptional and exciting chance of wining a cash prize in return for saving money into Moola account.</p>
-                        <button type="button" className='animate-bounce'><a href="/moola">SEE MORE <img src="./Images/ic.png" alt="" /></a></button>
-                    </div>
-                </div>
-                <img className="rec" src="./Images/rec.png" alt="" />
-                <div className="services-text" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1000">
-                    <div className="service-subtext" id='ss'>
-                        <h2>Passabi</h2>
-                        <h3>Made for Small Business Owners</h3>
-                        <p>Passabi offers seamless group savings and provide access to no interest loans for individual members that have come together to solve their money challenges. Digitalize rotating savings platform that is seamlessly integrates with commercial bank and fin-tech companies to offers access to secure and easy to use financial services</p>
-                        <button type="button" className='animate-bounce'><a href="/passabi">SEE MORE <img src="./Images/ic.png" alt="" /></a></button>
-                    </div>
-                    <img src="./Images/Group 40.png" alt="" />
-                </div>
-            </div>
-            <div className="customers">
-                <h2>Here is what our customers think</h2>
-                <Swiper
-                    spaceBetween={30}
-                    centeredSlides={true}
-                    autoplay={{delay: 1500,disableOnInteraction: false,}}
-                    pagination={{clickable: true,}}
-                    navigation={true}
-                    modules={[Autoplay, Pagination, Navigation]}
-                    className="mySwiper"
-                    >
-                    <SwiperSlide>
-                        <div className="customer-text">
-                            <img src="./Images/woman1.jpg" alt="" />
-                            <div className="customer-subtext">
-                                <p>“From the moment I downloaded XtremPay, I was impressed by its user-friendly interface. Setting up my account was a breeze, and I was quickly navigating through its features with ease. The simplicity of the app, coupled with its powerful functionalities, has made managing my money more convenient than ever”.</p>
-                            </div>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className="customer-text">
-                            <img src="./Images/woman2.jpg" alt="" />
-                            <div className="customer-subtext">
-                                <p>“From the moment I downloaded XtremPay, I was impressed by its user-friendly interface. Setting up my account was a breeze, and I was quickly navigating through its features with ease. The simplicity of the app, coupled with its powerful functionalities, has made managing my money more convenient than ever”.</p>
-                            </div>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className="customer-text">
-                            <img src="./Images/woman3.jpg" alt="" />
-                            <div className="customer-subtext">
-                                <p>“From the moment I downloaded XtremPay, I was impressed by its user-friendly interface. Setting up my account was a breeze, and I was quickly navigating through its features with ease. The simplicity of the app, coupled with its powerful functionalities, has made managing my money more convenient than ever”.</p>
-                            </div>
+                    </div>        
+                </div>     
+            </section>
+            <hr className="hh"/>
+            <section id='portfolio' className='bg-[#E4E4E4] p-20 sm:p-[25px] md:p-[25px] lg:p-20'  data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+                <h1 className='text-[#ff014f] text-thin text-[20px]'>Projects</h1>
+                <h2 className='text-[60px] text-[#3c3e41] font-bold mt-2 sm:text-[40px] md:text-[50px] lg:text-[60px]'>Portfolio</h2>
+                <div className="grid grid-cols-3 gap-4 mt-20 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                    <div className="cursor-pointer shadow-lg rounded-lg bg-gradient-to-r from-[#e2e8ec] to-[#ffffff]" type='submit'>
+                        <img src="./Images/QR-full.png" className='rounded-md w-full  mb-3' alt="" />
+                        <h1 className='text-[#ff014f] text-thin text-[20px] mb-2 pl-4'>QR COMPONENT</h1>
+                        <div className="flex space-x-3 pl-4 mb-7 text-[16px]">
+                            <p className='font-medium'>HTML</p>
+                            <p className='font-medium'>CSS</p>
                         </div> 
-                    </SwiperSlide>
-                </Swiper>
-                <img className="eeh" src="./Images/Rectangle 1.png" alt="" />
-            </div>
-            <div className="end-end" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1000">
-                <img src="./Images/Group 34.png" alt="" />
-                <div className="end-end-text">
-                    <h2>END-TO-END SECURITY</h2>
-                    <p>At Xtrempay, we understand that your financial well-being is not just a matter of numbers; it's a matter of trust. That's why we've meticulously crafted an end-to-end security framework, ensuring that your financial data is safeguarded at every stage of your journey.</p>
-                    <li><img src="./Images/Frame 630482.png" alt="" />Secure Authentication: Your Digital Identity Shield</li>
-                    <li><img src="./Images/Frame 630482 (1).png" alt="" />Encrypted Communication: Safeguarding Your Transactions</li>
-                    <li><img src="./Images/Frame 630484.png" alt="" />Device Security: Extending the Shield to Your Device</li>
-                    <li><img src="./Images/Frame 630485.png" alt="" />Transaction Integrity: Verifying Every Financial Move</li>
-                    <li><img src="./Images/Frame 630486.png" alt="" />Data Residency and Compliance: Meeting Global Standards</li>
+                        {/* <p className='pl-4 mb-4 w-[90%] text-[16px]'>Scan QR Code from the website to improve your coding skills on Front-End mentor</p> */}
+                        <button className='flex justify-center js p-[10px] ml-4 mb-4 rounded-md text-[13px] w-[40%] text-center font-medium shadow-md text-white hover:bg-[#ff014f] hover:text-white bg-[#878e99] animate-bounce' type="button">View Project</button>
+                    </div>
+                    <div className="cursor-pointer shadow-lg rounded-lg bg-gradient-to-r from-[#e2e8ec] to-[#ffffff]" onClick={() => setOpenModal(true)} type='submit'>
+                        <img src="./Images/Sunnyside.png" className='rounded-md w-full  mb-3' alt="" />
+                        <h1 className='text-[#ff014f] text-thin text-[20px] mb-2 pl-4'>SUNNY SIDE</h1>
+                        <div className="flex space-x-3 pl-4 mb-7 text-[16px]">
+                            <p className='font-medium'>HTML</p>
+                            <p className='font-medium'>CSS</p>
+                        </div> 
+                        <button className='flex justify-center js p-[10px] ml-4 mb-4 rounded-md text-[13px] w-[40%] text-center font-medium shadow-md text-white hover:bg-[#ff014f] hover:text-white bg-[#878e99] animate-bounce' type="button">View Project</button>
+                    </div>
+                    <div className="cursor-pointer shadow-lg rounded-lg bg-gradient-to-r from-[#e2e8ec] to-[#ffffff]" onClick={() => setOpenModal(true)} type='submit'>
+                        <img src="./Images/Easy-Banking.png" className='rounded-md w-full  mb-3' alt="" />
+                        <h1 className='text-[#ff014f] text-thin text-[20px] mb-2 pl-4'>EASY BANKING</h1>
+                        <div className="flex space-x-3 pl-4 mb-7">
+                            <p className='font-medium'>HTML</p>
+                            <p className='font-medium'>CSS</p>
+                        </div> 
+                        <button className='flex justify-center js p-[10px] ml-4 mb-4 rounded-md text-[13px] w-[40%] text-center font-medium shadow-md text-white hover:bg-[#ff014f] hover:text-white bg-[#878e99] animate-bounce' type="button">View Project</button>
+                    </div>
+                    <div className="cursor-pointer shadow-lg rounded-lg bg-gradient-to-r from-[#e2e8ec] to-[#ffffff]" onClick={() => setOpenModal(true)} type='submit'>
+                        <img src="./Images/Counter.png" className='rounded-md w-full  mb-3' alt="" />
+                        <h1 className='text-[#ff014f] text-thin text-[20px] mb-2 pl-4'>COUNTER</h1>
+                        <div className="flex space-x-3 pl-4 mb-7 text-[16px]">
+                            <p className='font-medium'>HTML</p>
+                            <p className='font-medium'>CSS</p>
+                            <p className='font-medium'>JAVASCRIPT</p>
+                        </div> 
+                        <button className='flex justify-center js p-[10px] ml-4 mb-4 rounded-md text-[13px] w-[40%] text-center font-medium shadow-md text-white hover:bg-[#ff014f] hover:text-white bg-[#878e99] animate-bounce' type="button">View Project</button>
+                    </div>
+                    <div className="cursor-pointer shadow-lg rounded-lg bg-gradient-to-r from-[#e2e8ec] to-[#ffffff]" onClick={() => setOpenModal(true)} type='submit'>
+                        <img src="./Images/Color-Flipper.png" className='rounded-md w-full  mb-3' alt="" />
+                        <h1 className='text-[#ff014f] text-thin text-[20px] mb-2 pl-4'>BACKGROUND FLIPPER</h1>
+                        <div className="flex space-x-3 pl-4 mb-7 text-[16px]">
+                            <p className='font-medium'>HTML</p>
+                            <p className='font-medium'>CSS</p>
+                            <p className='font-medium'>JAVASCRIPT</p>
+                        </div> 
+                        <button className='flex justify-center js p-[10px] ml-4 mb-4 rounded-md text-[13px] w-[40%] text-center font-medium shadow-md text-white hover:bg-[#ff014f] hover:text-white bg-[#878e99] animate-bounce' type="button">View Project</button>
+                    </div>
+                    <div className="cursor-pointer shadow-lg rounded-lg bg-gradient-to-r from-[#e2e8ec] to-[#ffffff]" onClick={() => setOpenModal(true)} type='submit'>
+                        <img src="./Images/Quiz-App.png" className='rounded-md w-full  mb-3' alt="" />
+                        <h1 className='text-[#ff014f] text-thin text-[20px] mb-2 pl-4'>QUIZ APP</h1>
+                        <div className="flex space-x-3 pl-4 mb-7 text-[16px]">
+                            <p className='font-medium'>HTML</p>
+                            <p className='font-medium'>CSS</p>
+                            <p className='font-medium'>JAVASCRIPT</p>
+                        </div> 
+                        <button className='flex justify-center js p-[10px] ml-4 mb-4 rounded-md text-[13px] w-[40%] text-center font-medium shadow-md text-white hover:bg-[#ff014f] hover:text-white bg-[#878e99] animate-bounce' type="button">View Project</button>
+                    </div>
+                    <div className="cursor-pointer shadow-lg rounded-lg bg-gradient-to-r from-[#e2e8ec] to-[#ffffff]" onClick={() => setOpenModal(true)} type='submit'>
+                        <img src="./Images/Fitness Care.png" className='rounded-md w-full  mb-3' alt="" />
+                        <h1 className='text-[#ff014f] text-thin text-[20px] mb-2 pl-4'>FITNESS CARE</h1>
+                        <div className="flex space-x-3 pl-4 mb-7 text-[16px]">
+                            <p className='font-medium'>HTML</p>
+                            <p className='font-medium'>CSS</p>
+                            <p className='font-medium'>JAVASCRIPT</p>
+                        </div> 
+                        <button className='flex justify-center js p-[10px] ml-4 mb-4 rounded-md text-[13px] w-[40%] text-center font-medium shadow-md text-white hover:bg-[#ff014f] hover:text-white bg-[#878e99] animate-bounce' type="button">View Project</button>
+                    </div>
+                    <div className="cursor-pointer shadow-lg rounded-lg bg-gradient-to-r from-[#e2e8ec] to-[#ffffff]" onClick={() => setOpenModal(true)} type='submit'>
+                        <img src="./Images/Xtrempay.png" className='rounded-md w-full  mb-3' alt="" />
+                        <h1 className='text-[#ff014f] text-thin text-[20px] mb-2 pl-4'>XTREMPAY</h1>
+                        <div className="flex space-x-3 pl-4 mb-7 text-[16px]">
+                            <p className='font-medium'>HTML</p>
+                            <p className='font-medium'>CSS</p>
+                            <p className='font-medium'>JAVASCRIPT</p>
+                            <p className='font-medium'>REACT</p>
+                        </div> 
+                        <button className='flex justify-center js p-[10px] ml-4 mb-4 rounded-md text-[13px] w-[40%] text-center font-medium shadow-md text-white hover:bg-[#ff014f] hover:text-white bg-[#878e99] animate-bounce' type="button">View Project</button>
+                    </div>
+                    <div className="cursor-pointer shadow-lg rounded-lg bg-gradient-to-r from-[#e2e8ec] to-[#ffffff]" onClick={() => setOpenModal(true)} type='submit'>
+                        <img src="./Images/Amali.png" className='rounded-md w-full  mb-3' alt="" />
+                        <h1 className='text-[#ff014f] text-thin text-[20px] mb-2 pl-4'>AMALI</h1>
+                        <div className="flex space-x-3 pl-4 mb-7 text-[16px]">
+                            <p className='font-medium'>HTML</p>
+                            <p className='font-medium'>CSS</p>
+                            <p className='font-medium'>JAVASCRIPT</p>
+                            <p className='font-medium'>REACT</p>
+                        </div> 
+                        <button className='flex justify-center js p-[10px] ml-4 mb-4 rounded-md text-[13px] w-[40%] text-center font-medium shadow-md text-white hover:bg-[#ff014f] hover:text-white bg-[#878e99] animate-bounce' type="button">View Project</button>
+                    </div>
                 </div>
-            </div>
-            <div className="agent" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
-                <div className="agent-text">
-                    <h2>Become an Xtrempay Agent</h2>
-                    <p>Enjoy 0%  charges on your transactions and also make free deposite and withdrawals</p>
-                    <button>
-                        <img src="./Images/whatsapp.png" alt="" />Contact to join Xtremepay
-                    </button>
-                    <button className='seg'>
-                        <img src="./Images/whatsapp.png" alt="" />Send an Email
-                    </button>
+            </section>
+            <hr className='hh'/>    
+            <section id='contact' className='bg-[#E4E4E4] p-20 sm:p-[25px] md:p-[25px] lg:p-20'  data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+                <h1 className='text-[#ff014f] text-thin text-[20px]'>CONTACT</h1>
+                <h2 className='text-[60px] text-[#3c3e41] font-bold mt-2 sm:text-[40px] md:text-[50px] lg:text-[60px]'>CONNECT WITH ME</h2>
+                <div className="grid grid-cols-2 gap-12 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2">
+                    <div className="flex items-start justify-start ml-[auto] mr-[auto]  shadow-lg w-[90%] sm:w-[100%] md:w-[70%] lg:w-[90%] p-4 rounded-lg flex-col mt-10">
+                        <img src="./Images/contact1.png" className='rounded-md mb-4 w-full' alt="" />
+                        <h1 className='font-medium text-[30px] tracking-wide mb-2'>Emeka Kalu</h1>
+                        <p className='text-[20px] tracking-wide mb-2'>Chief Operating Developer</p>
+                        <p className='text-[20px] tracking-wide mb-2 w-[95%]'>I am available for freelance work. Connect with me via and call in to my account.</p>
+                        <p className='text-[20px] tracking-wide mb-2'>Phone: 09046964772</p>
+                        <p className='text-[20px] tracking-wide mb-2'>Email: brickkalu@gmail.com</p>
+                        <p className='text-[20px] tracking-wide mb-2'>Connect with me</p>
+                        <div className="flex space-x-2 mt-5">
+                            <img src="./Images/Frame 630354.png" className='w-[10%] shadow-md rounded-full p-2 cursor-pointer sm:w-[17%] md:w-[10%]' alt="" />
+                            <img src="./Images/Frame 630355.png" className='w-[10%] shadow-md rounded-full p-2 cursor-pointer sm:w-[17%] md:w-[10%]' alt="" />
+                            <img src="./Images/Frame 630357.png" className='w-[10%] shadow-md rounded-full p-2 cursor-pointer sm:w-[17%] md:w-[10%]' alt="" />
+                            <img src="./Images/download.png" className='w-[10%] shadow-md rounded-full p-2 cursor-pointer sm:w-[17%] md:w-[10%]' alt="" />
+                        </div>
+                    </div>
+                    <div className='border p-4 rounded-lg mt-10 shadow-lg ml-[auto] mr-[auto] sm:w-[100%] w-[90%] md:w-[70%] lg:w-[90%]'>
+                        <form action="" className=''>
+                            <div className="t">
+                                <div className="grid grid-cols-2 gap-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2">
+                                    <div className='mr-5 sm:mr-0 md:mr-0 lg:mr-5'>
+                                        <label htmlFor="" className='mb-3 text-[#3c3e41] text-[16px]'>YOUR NAME</label>
+                                        <input type="text" className='p-[12px] rounded-md bg-[#fdfefe] w-[100%]'/>
+                                    </div>
+                                    <div className='mt-0 sm:mt-2 md:mt-0 lg:mt-0'>
+                                        <label htmlFor="" className='mb-3 text-[#3c3e41] text-[16px]'>PHONE NUMBER</label>
+                                        <input type="number" className='p-[12px] rounded-md w-[100%] bg-[#fdfefe]' />
+                                    </div>
+                                </div>
+                                <div className="flex flex-col">
+                                    <label htmlFor="" className='mb-3 mt-3 text-[#3c3e41] text-[16px]'>EMAIL</label>
+                                    <input type="email" className='p-[12px] rounded-md border border-solid bg-[#fdfefe]'/>
+                                </div>
+                                <div className="flex flex-col">
+                                    <label htmlFor="" className='mb-3 mt-3 text-[#3c3e41] text-[16px]'>SUBJECT</label>
+                                    <input type="text" className='p-[12px] rounded-md border border-solid bg-[#fdfefe]'/>
+                                </div>
+                                <div className="tx flex flex-col">
+                                    <label htmlFor="" className='mb-3 mt-3 text-[#3c3e41] text-[16px]'>MESSAGE</label>
+                                    <textarea name="" id="" cols="30" rows="6" className='p-2 rounded-md bg-[#fdfefe]'></textarea>
+                                </div>
+                                <button type='button' className='mt-5 flex justify-center items-center bg-[#878e99] p-2 text-white rounded-md hover:bg-[#ff014f] hover:text-white w-full'>SEND MESSAGE</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
-                <img src="./Images/pos.png" alt="" />
-            </div>
-            <ContactTab/>
+            </section>
+            <hr className='hh'/>
             <Footer/>
         </>
     )

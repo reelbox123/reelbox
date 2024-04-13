@@ -1,7 +1,10 @@
 function Footer() {
     return (
         <>
-            <footer>&copy;2024 Xtremepay. All Rights Reserved.</footer>
+            <div className="flex justify-center p-4 items-center bg-[#E4E4E4]">
+                <img src="./Images/p.png" className="w-[2%] rounded-full" alt="" />
+                <footer className="p-1 flex justify-center items-center">&copy;2024 Emeka. All Rights Reserved.</footer>
+            </div>
         </>
     )
 }
