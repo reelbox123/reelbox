@@ -32,7 +32,7 @@ function LandingPage () {
                 </div>
             </div>
             <section id="features" className='bg-[#E4E4E4] p-20 sm:p-[25px] md:p-[25px] lg:p-20'  data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
-                <h1 className='text-[#ff014f] text-thin text-[20px]'>FEATURES</h1>
+                <h1 className='text-[#ff014f] text-thin text-[20px]'>SERVICES</h1>
                 <h2 className='text-[60px] text-[#3c3e41] font-bold mt-2 sm:text-[40px] md:text-[50px] lg:text-[60px]'>What I Do</h2>
                 <div className="grid grid-cols-3 gap-4 mt-20 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                     <div className="shadow-lg rounded-lg p-12 w-[100%] sm:p-[20px] md:p-[35px] lg:p-12 sm:w-[100%] md:w-[100%] lg:w-[100%]">
@@ -129,7 +129,7 @@ function LandingPage () {
                         {/* <p className='pl-4 mb-4 w-[90%] text-[16px]'>Scan QR Code from the website to improve your coding skills on Front-End mentor</p> */}
                         <button className='flex justify-center js p-[10px] ml-4 mb-4 rounded-md text-[13px] w-[40%] text-center font-medium shadow-md text-white hover:bg-[#ff014f] hover:text-white bg-[#878e99] animate-bounce' type="button">View Project</button>
                     </div>
-                    <div className="cursor-pointer shadow-lg rounded-lg bg-gradient-to-r from-[#e2e8ec] to-[#ffffff]" onClick={() => setOpenModal(true)} type='submit'>
+                    <div className="cursor-pointer shadow-lg rounded-lg bg-gradient-to-r from-[#e2e8ec] to-[#ffffff]" type='submit'>
                         <img src="./Images/Sunnyside.png" className='rounded-md w-full  mb-3' alt="" />
                         <h1 className='text-[#ff014f] text-thin text-[20px] mb-2 pl-4'>SUNNY SIDE</h1>
                         <div className="flex space-x-3 pl-4 mb-7 text-[16px]">
@@ -138,7 +138,7 @@ function LandingPage () {
                         </div> 
                         <button className='flex justify-center js p-[10px] ml-4 mb-4 rounded-md text-[13px] w-[40%] text-center font-medium shadow-md text-white hover:bg-[#ff014f] hover:text-white bg-[#878e99] animate-bounce' type="button">View Project</button>
                     </div>
-                    <div className="cursor-pointer shadow-lg rounded-lg bg-gradient-to-r from-[#e2e8ec] to-[#ffffff]" onClick={() => setOpenModal(true)} type='submit'>
+                    <div className="cursor-pointer shadow-lg rounded-lg bg-gradient-to-r from-[#e2e8ec] to-[#ffffff]" type='submit'>
                         <img src="./Images/Easy-Banking.png" className='rounded-md w-full  mb-3' alt="" />
                         <h1 className='text-[#ff014f] text-thin text-[20px] mb-2 pl-4'>EASY BANKING</h1>
                         <div className="flex space-x-3 pl-4 mb-7">
@@ -147,7 +147,7 @@ function LandingPage () {
                         </div> 
                         <button className='flex justify-center js p-[10px] ml-4 mb-4 rounded-md text-[13px] w-[40%] text-center font-medium shadow-md text-white hover:bg-[#ff014f] hover:text-white bg-[#878e99] animate-bounce' type="button">View Project</button>
                     </div>
-                    <div className="cursor-pointer shadow-lg rounded-lg bg-gradient-to-r from-[#e2e8ec] to-[#ffffff]" onClick={() => setOpenModal(true)} type='submit'>
+                    <div className="cursor-pointer shadow-lg rounded-lg bg-gradient-to-r from-[#e2e8ec] to-[#ffffff]" type='submit'>
                         <img src="./Images/Counter.png" className='rounded-md w-full  mb-3' alt="" />
                         <h1 className='text-[#ff014f] text-thin text-[20px] mb-2 pl-4'>COUNTER</h1>
                         <div className="flex space-x-3 pl-4 mb-7 text-[16px]">
@@ -157,7 +157,7 @@ function LandingPage () {
                         </div> 
                         <button className='flex justify-center js p-[10px] ml-4 mb-4 rounded-md text-[13px] w-[40%] text-center font-medium shadow-md text-white hover:bg-[#ff014f] hover:text-white bg-[#878e99] animate-bounce' type="button">View Project</button>
                     </div>
-                    <div className="cursor-pointer shadow-lg rounded-lg bg-gradient-to-r from-[#e2e8ec] to-[#ffffff]" onClick={() => setOpenModal(true)} type='submit'>
+                    <div className="cursor-pointer shadow-lg rounded-lg bg-gradient-to-r from-[#e2e8ec] to-[#ffffff]" type='submit'>
                         <img src="./Images/Color-Flipper.png" className='rounded-md w-full  mb-3' alt="" />
                         <h1 className='text-[#ff014f] text-thin text-[20px] mb-2 pl-4'>BACKGROUND FLIPPER</h1>
                         <div className="flex space-x-3 pl-4 mb-7 text-[16px]">
@@ -167,7 +167,7 @@ function LandingPage () {
                         </div> 
                         <button className='flex justify-center js p-[10px] ml-4 mb-4 rounded-md text-[13px] w-[40%] text-center font-medium shadow-md text-white hover:bg-[#ff014f] hover:text-white bg-[#878e99] animate-bounce' type="button">View Project</button>
                     </div>
-                    <div className="cursor-pointer shadow-lg rounded-lg bg-gradient-to-r from-[#e2e8ec] to-[#ffffff]" onClick={() => setOpenModal(true)} type='submit'>
+                    <div className="cursor-pointer shadow-lg rounded-lg bg-gradient-to-r from-[#e2e8ec] to-[#ffffff]" type='submit'>
                         <img src="./Images/Quiz-App.png" className='rounded-md w-full  mb-3' alt="" />
                         <h1 className='text-[#ff014f] text-thin text-[20px] mb-2 pl-4'>QUIZ APP</h1>
                         <div className="flex space-x-3 pl-4 mb-7 text-[16px]">
@@ -177,7 +177,7 @@ function LandingPage () {
                         </div> 
                         <button className='flex justify-center js p-[10px] ml-4 mb-4 rounded-md text-[13px] w-[40%] text-center font-medium shadow-md text-white hover:bg-[#ff014f] hover:text-white bg-[#878e99] animate-bounce' type="button">View Project</button>
                     </div>
-                    <div className="cursor-pointer shadow-lg rounded-lg bg-gradient-to-r from-[#e2e8ec] to-[#ffffff]" onClick={() => setOpenModal(true)} type='submit'>
+                    <div className="cursor-pointer shadow-lg rounded-lg bg-gradient-to-r from-[#e2e8ec] to-[#ffffff]" type='submit'>
                         <img src="./Images/Fitness Care.png" className='rounded-md w-full  mb-3' alt="" />
                         <h1 className='text-[#ff014f] text-thin text-[20px] mb-2 pl-4'>FITNESS CARE</h1>
                         <div className="flex space-x-3 pl-4 mb-7 text-[16px]">
@@ -187,9 +187,9 @@ function LandingPage () {
                         </div> 
                         <button className='flex justify-center js p-[10px] ml-4 mb-4 rounded-md text-[13px] w-[40%] text-center font-medium shadow-md text-white hover:bg-[#ff014f] hover:text-white bg-[#878e99] animate-bounce' type="button">View Project</button>
                     </div>
-                    <div className="cursor-pointer shadow-lg rounded-lg bg-gradient-to-r from-[#e2e8ec] to-[#ffffff]" onClick={() => setOpenModal(true)} type='submit'>
-                        <img src="./Images/Xtrempay.png" className='rounded-md w-full  mb-3' alt="" />
-                        <h1 className='text-[#ff014f] text-thin text-[20px] mb-2 pl-4'>XTREMPAY</h1>
+                    <div className="cursor-pointer shadow-lg rounded-lg bg-gradient-to-r from-[#e2e8ec] to-[#ffffff]" type='submit'>
+                        <img src="./Images/Ekom-Headset.png" className='rounded-md w-full  mb-3' alt="" />
+                        <h1 className='text-[#ff014f] text-thin text-[20px] mb-2 pl-4'>E-kom Headset</h1>
                         <div className="flex space-x-3 pl-4 mb-7 text-[16px]">
                             <p className='font-medium'>HTML</p>
                             <p className='font-medium'>CSS</p>
@@ -198,7 +198,7 @@ function LandingPage () {
                         </div> 
                         <button className='flex justify-center js p-[10px] ml-4 mb-4 rounded-md text-[13px] w-[40%] text-center font-medium shadow-md text-white hover:bg-[#ff014f] hover:text-white bg-[#878e99] animate-bounce' type="button">View Project</button>
                     </div>
-                    <div className="cursor-pointer shadow-lg rounded-lg bg-gradient-to-r from-[#e2e8ec] to-[#ffffff]" onClick={() => setOpenModal(true)} type='submit'>
+                    <div className="cursor-pointer shadow-lg rounded-lg bg-gradient-to-r from-[#e2e8ec] to-[#ffffff]" type='submit'>
                         <img src="./Images/Amali.png" className='rounded-md w-full  mb-3' alt="" />
                         <h1 className='text-[#ff014f] text-thin text-[20px] mb-2 pl-4'>AMALI</h1>
                         <div className="flex space-x-3 pl-4 mb-7 text-[16px]">
@@ -220,14 +220,13 @@ function LandingPage () {
                         <img src="./Images/contact1.png" className='rounded-md mb-4 w-full' alt="" />
                         <h1 className='font-medium text-[30px] tracking-wide mb-2'>Emeka Kalu</h1>
                         <p className='text-[20px] tracking-wide mb-2'>Chief Operating Developer</p>
-                        <p className='text-[20px] tracking-wide mb-2 w-[95%]'>I am available for freelance work. Connect with me via and call in to my account.</p>
+                        <p className='text-[20px] tracking-wide mb-2 w-[95%]'>I am available for remote and freelance work. Connect with me via and call in to my account.</p>
                         <p className='text-[20px] tracking-wide mb-2'>Phone: 09046964772</p>
                         <p className='text-[20px] tracking-wide mb-2'>Email: brickkalu@gmail.com</p>
                         <p className='text-[20px] tracking-wide mb-2'>Connect with me</p>
                         <div className="flex space-x-2 mt-5">
                             <img src="./Images/Frame 630354.png" className='w-[10%] shadow-md rounded-full p-2 cursor-pointer sm:w-[17%] md:w-[10%]' alt="" />
                             <img src="./Images/Frame 630355.png" className='w-[10%] shadow-md rounded-full p-2 cursor-pointer sm:w-[17%] md:w-[10%]' alt="" />
-                            <img src="./Images/Frame 630357.png" className='w-[10%] shadow-md rounded-full p-2 cursor-pointer sm:w-[17%] md:w-[10%]' alt="" />
                             <img src="./Images/download.png" className='w-[10%] shadow-md rounded-full p-2 cursor-pointer sm:w-[17%] md:w-[10%]' alt="" />
                         </div>
                     </div>
