@@ -1,0 +1,9 @@
+import Navbar from '../components/nav.jsx';
+function Reels () {
+    return (
+        <>
+            <Navbar/>
+        </>
+    )
+}
+export default Reels

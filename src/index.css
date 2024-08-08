@@ -2,26 +2,52 @@
 @tailwind components;
 @tailwind utilities;
 body {
-  font-family: "Poppins", ;
-  /* background-color: #151515; */
-}
-.active {
-  color: #FE9226;
-}
-.hh {
-  color: rgb(71, 71, 71);
+  font-family: "Jockey One", sans-serif;
+  background-color: #1E1E1E;
 }
 .header  {
-  background-image: url("../public/Images/home-bg.jpg");
+  background-image: url("/Images/Group 1.png");
+  background-position: bottom right;
+  background-size: auto 85%;
+  background-repeat: no-repeat;
+}
+.music {
+  background-image: url("/Images/music.jpg");
+  background-position: center center;
+  background-size: auto 270%;
+  background-repeat: no-repeat;
+}
+.p1 {
+  background-image: url("/Images/p1.jpg");
   background-position: center;
   background-size: cover;
+  background-repeat: no-repeat;
+  filter: brightness(80%);
 }
-.f input {
-  outline: none;
+.p3 {
+  background-image: url("/Images/p3.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: brightness(80%);
 }
-.t input {
-  outline: none;
+.p2 {
+  background-image: url("/Images/p2.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: brightness(80%);
 }
-.tx textarea{
-  outline: none;
+.sg {
+  background-image: url("/Images/sg.jpg");
+  background-position: center;
+  background-size: auto 150vw;
+  background-repeat: no-repeat;
+  filter: brightness(90%);
 }
+.connect { 
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
