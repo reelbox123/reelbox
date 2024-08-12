@@ -1,7 +1,7 @@
 function Footer() {
     return (
         <>
-            <div className="flex justify-start pl-10 pb-6 items-center self-center">
+            <div className="flex justify-startchr pl-10 pb-6 items-center self-center">
                 <div className="flex justify-start items-center">
                     <img className="w-[25%]" src="/Images/logo.png" alt="" />
                     <a className="text-[25px] text-white font-medium" href="/">BEATBIT</a>

@@ -19,8 +19,8 @@ function ConnectWallet () {
                 <a className="text-[35px] text-white font-medium" href="/">BEATBIT</a>
             </div>
             <h1 className='text-center mt-[20px] text-white text-[30px]'>JOIN BEATBIT BY CONNECTING  WALLET</h1>
-            <div className='connect text-black rounded-sm  mt-[30px]'>
-                <button className='text-white' type='button'>Connect Wallet</button>
+            <div className='connect text-black rounded-sm flex justify-center items-center mt-[30px]'>
+                <a href="/reels"><button className='text-white bg-[#DE0808] py-[10px] px-[20px] rounded-md text-[20px]' type='button'>Connect Wallet</button></a>
             </div>
         </>
     )

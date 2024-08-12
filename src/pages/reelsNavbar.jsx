@@ -1,7 +1,6 @@
-// import { N } from "ethers";
 import { useState } from "react";
 
-function NavBar () {
+function ReelsNavBar () {
     const [nav, setNav] = useState(false);
     const showNav = ()  => {
        setNav(!nav)
@@ -21,17 +20,17 @@ function NavBar () {
                     </div>
                     <ul className="flex justify-center items-center text-[16px] space-x-5 text-white sm:hidden md:hidden lg:flex">
                         <li className="text-center text-md font-md"><a className='pr-3' href="/">How it works</a></li>
-                        <li className="text-center text-md"><a className='pr-3' href="/reels">For Musicians</a></li>
-                        <li className="text-center text-md"><a className='pr-3' href="">For Audience</a></li>
-                        <a href="/connect" rel="noopener noreferrer"><button  className="flex p-[10px] rounded-md text-[15px] font-medium shadow-md text-white hover:bg-[#ff014f] hover:text-white bg-[#DE0808] sm:hidden md:hidden lg:flex" type="button">Connect Wallet</button></a>
+                        <li className="text-center text-md"><a className='pr-3' href="/">For Musicians</a></li>
+                        <li className="text-center text-md"><a className='pr-3' href="/">For Audience</a></li>
+                        <a href="/connect" rel="noopener noreferrer"><img className="w-[25%] ml-[30px]" src="/Images/address.png" alt="" srcSet="" /></a>
                     </ul>
                     <div className={!nav ? 'fixed left-[-100%]' : 'fixed left-0 top-0 w-[40%] text-black mt-[76px] h-full bg-[#E4E4E4] shadow-md ease-in-out duration-500 sm:w-[80%] md:w-[40%] lg:hidden'}>
                         <ul className="uppercase w-full p-12 space-y-6">
-                            <li className="text-md"><a className='hover:text-[#ff014f] font-medium' onClick={showNav} href="/">Home</a></li>
-                            <li className="text-md"><a className='hover:text-[#ff014f] font-medium' onClick={showNav} href="">Services</a></li>
-                            <li className="text-md"><a className='hover:text-[#ff014f] font-medium' onClick={showNav} href="">Skills</a></li>
-                            <li className="text-md"><a className='hover:text-[#ff014f] font-medium' onClick={showNav} href="">Projects</a></li>
-                            <li className=""><a className='hover:text-[#ff014f] font-medium' onClick={showNav}  href="#contact">Contact</a></li>
+                            <li className="text-md"><a className='hover:text-[#ff014f] font-medium' onClick={showNav} href="/"></a></li>
+                            <li className="text-md"><a className='hover:text-[#ff014f] font-medium' onClick={showNav} href=""></a></li>
+                            <li className="text-md"><a className='hover:text-[#ff014f] font-medium' onClick={showNav} href=""></a></li>
+                            <li className="text-md"><a className='hover:text-[#ff014f] font-medium' onClick={showNav} href=""></a></li>
+                            <li className=""><a className='hover:text-[#ff014f] font-medium' onClick={showNav}  href="#contact"></a></li>
                         </ul>
                         <div className="flex p-[10px] ml-12 w-[40%] mr-4 rounded-md text-[13px] hover:bg-[#ff014f] hover:text-white bg-[#878e99] sm:w-[50%]">
                             <a href="https://www.resume.com/dashboard/resume/a1dbbd70-42a3-43fb-b7ba-18b37407ed87" target="_blank" rel="noopener noreferrer"><button type="button">Download Resume</button></a>
@@ -43,4 +42,4 @@ function NavBar () {
         </>
     )
 }
-export default NavBar
+export default ReelsNavBar
