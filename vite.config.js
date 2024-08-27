@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [react()],
   build: {
     rollupOptions: {
-      external: ['wagmi'] // Add wagmi to the external array
+      external: ['wagmi/chains'] // Add wagmi to the external array
     },
   }
 })
