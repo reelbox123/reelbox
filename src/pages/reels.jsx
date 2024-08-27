@@ -1,6 +1,6 @@
 import ReelsNavBar from "./reelsNavbar"
 import Sidemenu from "../components/sidemenu"
-function Reels () {
+function Dashboard () {
     return (
         <>
             <ReelsNavBar/>
@@ -68,4 +68,4 @@ function Reels () {
         </>
     )
 }
-export default Reels
+export default Dashboard

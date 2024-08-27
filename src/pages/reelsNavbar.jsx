@@ -5,6 +5,8 @@ function ReelsNavBar () {
     const showNav = ()  => {
        setNav(!nav)
     }
+    // const location = useLocation();
+    // const { account } = location.state;
     return (
         <>
             <div className="fixed w-full z-[1000] p-[5px] py-2 bg-[#1E1E1E] shadow-md">
@@ -19,10 +21,12 @@ function ReelsNavBar () {
                         </div>
                     </div>
                     <ul className="flex justify-center items-center text-[16px] space-x-5 text-white sm:hidden md:hidden lg:flex">
-                        <li className="text-center text-md font-md"><a className='pr-3' href="/">How it works</a></li>
-                        <li className="text-center text-md"><a className='pr-3' href="/">For Musicians</a></li>
-                        <li className="text-center text-md"><a className='pr-3' href="/">For Audience</a></li>
-                        <a href="/connect" rel="noopener noreferrer"><img className="w-[25%] ml-[30px]" src="/Images/address.png" alt="" srcSet="" /></a>
+                        <li className="text-center text-md font-md"><a className='pr-3' href="/home">How it works</a></li>
+                        <li className="text-center text-md"><a className='pr-3' href="/home">For Musicians</a></li>
+                        <li className="text-center text-md"><a className='pr-3' href="/home">For Audience</a></li>
+                        {/* <w3m-account-button />                         */}
+                        <w3m-button />
+                        {/* <a href="/connect" rel="noopener noreferrer"><img className="w-[25%] ml-[30px]" src="/Images/address.png" alt="" srcSet="" /></a> */}
                     </ul>
                     <div className={!nav ? 'fixed left-[-100%]' : 'fixed left-0 top-0 w-[40%] text-black mt-[76px] h-full bg-[#E4E4E4] shadow-md ease-in-out duration-500 sm:w-[80%] md:w-[40%] lg:hidden'}>
                         <ul className="uppercase w-full p-12 space-y-6">

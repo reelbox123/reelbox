@@ -13,17 +13,17 @@ function NavBar () {
                     <div className="flex justify-between items-center w-[100%] sm:w-[100%] md:w-[100%] lg:w-[20%]">
                         <div className="flex justify-start self-center">
                             <img className="w-[18%]" src="/Images/logo.png" alt="" />
-                            <a className="text-[25px] text-white font-medium" href="/">BEATBIT</a>
+                            <a className="text-[25px] text-white font-medium" href="/dashboard">BEATBIT</a>
                         </div>
                         <div className="w-0 sm:w-7 md:w-8 lg:w-0" onClick={showNav}>
                            {!nav ? <img className="cursor-pointer" src="/Images/menu.png" alt=""/> : <img className="cursor-pointer" src="/Images/close.png" alt=""/>}
                         </div>
                     </div>
                     <ul className="flex justify-center items-center text-[16px] space-x-5 text-white sm:hidden md:hidden lg:flex">
-                        <li className="text-center text-md font-md"><a className='pr-3' href="/">How it works</a></li>
-                        <li className="text-center text-md"><a className='pr-3' href="/reels">For Musicians</a></li>
-                        <li className="text-center text-md"><a className='pr-3' href="">For Audience</a></li>
-                        <a href="/connect" rel="noopener noreferrer"><button  className="flex p-[10px] rounded-md text-[15px] font-medium shadow-md text-white hover:bg-[#ff014f] hover:text-white bg-[#DE0808] sm:hidden md:hidden lg:flex" type="button">Connect Wallet</button></a>
+                        <li className="text-center text-md font-md"><a className='pr-3' href="/home">How it works</a></li>
+                        <li className="text-center text-md"><a className='pr-3' href="/home">For Musicians</a></li>
+                        <li className="text-center text-md"><a className='pr-3' href="/home">For Audience</a></li>
+                        <w3m-button/>
                     </ul>
                     <div className={!nav ? 'fixed left-[-100%]' : 'fixed left-0 top-0 w-[40%] text-black mt-[76px] h-full bg-[#E4E4E4] shadow-md ease-in-out duration-500 sm:w-[80%] md:w-[40%] lg:hidden'}>
                         <ul className="uppercase w-full p-12 space-y-6">

@@ -1,16 +1,16 @@
 import React, { useEffect } from 'react';
-// import { useNavigate } from 'react-router-dom';
-// import { useAccount } from 'wagmi';
+import { useNavigate } from 'react-router-dom';
+import { useAccount } from 'wagmi';
 import Navbar from '../components/nav.jsx';
 function ConnectWallet () {
-    // const naivgate = useNavigate();
-    // const { address, isConnecting, isDisconnected } = useAccount();
+    const navigate = useNavigate();
+    const { address, isConnecting, isDisconnected } = useAccount();
     
-    // useEffect(() => {
-    //     if (address && !isConnecting) {
-    //       naivgate('/reels');
-    //     }
-    //   }, [address, isConnecting, history]);
+    useEffect(() => {
+        if (address && !isConnecting) {
+          navigate('/dashboard');
+        }
+      }, [address, isConnecting, history]);
     return (
         <>
             <Navbar/>
@@ -20,7 +20,7 @@ function ConnectWallet () {
             </div>
             <h1 className='text-center mt-[20px] text-white text-[30px]'>JOIN BEATBIT BY CONNECTING  WALLET</h1>
             <div className='connect text-black rounded-sm flex justify-center items-center mt-[30px]'>
-                <a href="/reels"><button className='text-white bg-[#DE0808] py-[10px] px-[20px] rounded-md text-[20px]' type='button'>Connect Wallet</button></a>
+                <button onClick={navigate}><w3m-button /></button>
             </div>
         </>
     )
