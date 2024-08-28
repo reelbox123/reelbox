@@ -1,6 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import LandingPage from './pages/landingPage.jsx'
-import ConnectWallet from './pages/connectWallet.jsx'
 import Dashboard from "./pages/reels.jsx"
 import Uploads from './pages/uploads.jsx';
 import Pools from './pages/pools.jsx';
@@ -11,6 +10,7 @@ import SubTrade from './pages/subtrade.jsx';
 import TopChart from './pages/topchart.jsx';
 import Collaboration from './pages/collaboration.jsx';
 import Chat from './pages/chat.jsx';
+import ConnectWallet from './pages/connectWallet.jsx';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
