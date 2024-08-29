@@ -69,7 +69,7 @@ function Uploads () {
                         onChange={(e) => setAudioImage(e.target.files[0])}
                     />
                 </div>
-                <a href="/" rel="noopener noreferrer"><button  className="flex py-[10px] px-[70px] mt-[20px] rounded-md text-[15px] font-medium shadow-md text-white hover:bg-[#ff015f] hover:text-white bg-[#DE0808] sm:hidden md:hidden lg:flex" type="button">Upload Image</button></a>
+                <a href="/connect" rel="noopener noreferrer"><button  className="flex py-[10px] px-[70px] mt-[20px] rounded-md text-[15px] font-medium shadow-md text-white hover:bg-[#ff015f] hover:text-white bg-[#DE0808] sm:hidden md:hidden lg:flex" type="button">Upload Image</button></a>
                 <div className="mt-[20px]">
                     <label className="text-white text-[22px]" htmlFor="">Category</label>
                     <div className="flex justify-left items-center">
