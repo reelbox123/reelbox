@@ -105,4 +105,17 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
 }
+.carousel {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0;
+}
 
+.carousel button {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.carousel button:hover {
+  background-color: #eee;
+}

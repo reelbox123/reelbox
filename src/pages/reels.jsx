@@ -1,6 +1,85 @@
 import ReelsNavBar from "./reelsNavbar"
 import Sidemenu from "../components/sidemenu"
+import React, { useState, useEffect, useRef } from 'react';
+const reels = [
+    {
+      src: '../assets/audio/audio1.mp3',
+      title: 'Wild Things by Alessia',
+      image: '/Images/music1.png',
+    },
+    {
+      src: '../assets/audio/audio2.mp3',
+      title: 'Alone by Burnaboy',
+      image: '/Images/music2.png',
+    },
+    {
+      src: '../assets/audio/audio3.mp3',
+      title: 'Monster you made by Burnaboy',
+      image: '/Images/music1.png',
+    },
+    {
+        src: '../assets/audio/audio3.mp3',
+        title: 'Tested, Approved & Trusted (feat. Prince Swanny)',
+        image: '/Images/music1.png',
+      },
+  ];
+  
 function Dashboard () {
+    const [currentReelIndex, setCurrentReelIndex] = useState(null);
+    const audioRefs = useRef([]); // Refs to all audio elements
+
+  // Function to handle when a reel becomes visible
+    const handleReelVisibility = (index) => {
+        setCurrentReelIndex(index); // Update current reel index to the visible one
+    };
+    const playAudio = (index) => {
+        if (audioRefs.current[index]) {
+          audioRefs.current[index].play();
+        }
+    };
+    
+      // Function to pause the audio for the current reel
+    const pauseAudio = (index) => {
+    if (audioRefs.current[index]) {
+        audioRefs.current[index].pause();
+    }
+    };
+    
+      // Effect to handle autoplay when the current reel changes
+      useEffect(() => {
+        if (currentReelIndex !== null) {
+          playAudio(currentReelIndex);
+    
+          // Pause other audio elements
+          audioRefs.current.forEach((audio, idx) => {
+            if (idx !== currentReelIndex) {
+              audio.pause();
+            }
+          });
+        }
+    }, [currentReelIndex]);
+    useEffect(() => {
+        const options = {
+          root: null,
+          rootMargin: '0px',
+          threshold: 0.5, // Trigger when 50% of the element is visible
+        };
+    
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const index = parseInt(entry.target.dataset.index, 10);
+              handleReelVisibility(index);
+            }
+          });
+        }, options);
+        const reelElements = document.querySelectorAll('.reel');
+        reelElements.forEach((element) => observer.observe(element));
+
+        return () => {
+        reelElements.forEach((element) => observer.unobserve(element));
+        };
+    }, []);
     return (
         <>
             <ReelsNavBar/>
@@ -9,60 +88,32 @@ function Dashboard () {
                 <input className="border-2 py-[5px] px-[30px] w-[30%] outline-none rounded-md bg-transparent text-white text-[18px] text-center" type="text" placeholder="Search" />
             </div>
             <section>
-                <div className="flex justify-center items-center pt-[100px] flex-col">
-                    <div className="flex justify-center items-center">
-                        <img className="w-[3%] absolute left-[45%] cursor-pointer" src="/Images/Play (1).png" alt="" />
-                        <img className="w-[30%] mr-[40px]" src="/Images/music1.png" alt="" />
-                        <img className="w-[3%] h-[10%] cursor-pointer" src="/Images/Love.png" alt="" />
+                <div className="reels-container">
+                    {reels.map((reel, index) => (
+                    <div
+                        className="reel flex justify-center items-center flex-col pt-[80px]"
+                        key={index}
+                        data-index={index}
+                    >
+                        <img
+                        className="w-[25%] cursor-pointer rounded-2xl"
+                        src={reel.image}
+                        alt={`Cover for ${reel.title}`}
+                        onClick={() => (audioRefs.current[index].paused ? playAudio(index) : pauseAudio(index))}
+                        />
+                        <h2 className="mt-[30px] text-white text-[20px]">{reel.title}</h2>
+                        {/* <button
+                            className="text-white border-2 px-[30px] mt-[10px] cursor-pointer"
+                            onClick={() => (audioRefs.current[index].paused ? playAudio(index) : pauseAudio(index))}>
+                            {audioRefs.current[index]?.paused ? 'Play' : 'Pause'}
+                        </button> */}
+                        <audio
+                        ref={(el) => (audioRefs.current[index] = el)}
+                        src={reel.src}
+                        style={{ display: 'none' }}
+                        />
                     </div>
-                    <div className="flex justify-left items-center mt-[25px]">
-                        <img className="w-[15%]" src="/Images/icon1.png" alt="" />
-                        <p className="text-white text-[25px] ml-[30px]">Dira: let me be</p>
-                    </div>
-                </div>
-                <div className="flex justify-center items-center pt-[100px] flex-col">
-                    <div className="flex justify-center items-center">
-                        <img className="w-[3%] absolute left-[45%] cursor-pointer" src="/Images/Play (1).png" alt="" />
-                        <img className="w-[30%] mr-[40px]" src="/Images/music2.png" alt="" />
-                        <img className="w-[3%] h-[10%] cursor-pointer" src="/Images/Love.png" alt="" />
-                    </div>
-                    <div className="flex justify-left items-center mt-[25px]">
-                        <img className="w-[10%]" src="/Images/Ellipse 7.png" alt="" />
-                        <p className="text-white text-[25px] ml-[30px]">the real man in me: Jax man</p>
-                    </div>
-                </div>
-                <div className="flex justify-center items-center pt-[100px] flex-col">
-                    <div className="flex justify-center items-center">
-                        <img className="w-[3%] absolute left-[45%] cursor-pointer" src="/Images/Play (1).png" alt="" />
-                        <img className="w-[30%] mr-[40px]" src="/Images/music2.png" alt="" />
-                        <img className="w-[3%] h-[10%] cursor-pointer" src="/Images/Love.png" alt="" />
-                    </div>
-                    <div className="flex justify-left items-center mt-[25px]">
-                        <img className="w-[10%]" src="/Images/Ellipse 7.png" alt="" />
-                        <p className="text-white text-[25px] ml-[30px]">the real man in me: Jax man</p>
-                    </div>
-                </div>
-                <div className="flex justify-center items-center pt-[100px] flex-col">
-                    <div className="flex justify-center items-center">
-                        <img className="w-[3%] absolute left-[45%] cursor-pointer" src="/Images/Play (1).png" alt="" />
-                        <img className="w-[30%] mr-[40px]" src="/Images/music2.png" alt="" />
-                        <img className="w-[3%] h-[10%] cursor-pointer" src="/Images/Love.png" alt="" />
-                    </div>
-                    <div className="flex justify-left items-center mt-[25px]">
-                        <img className="w-[10%]" src="/Images/Ellipse 7.png" alt="" />
-                        <p className="text-white text-[25px] ml-[30px]">the real man in me: Jax man</p>
-                    </div>
-                </div>
-                <div className="flex justify-center items-center pt-[100px] flex-col">
-                    <div className="flex justify-center items-center">
-                        <img className="w-[3%] absolute left-[45%] cursor-pointer" src="/Images/Play (1).png" alt="" />
-                        <img className="w-[30%] mr-[40px]" src="/Images/music2.png" alt="" />
-                        <img className="w-[3%] h-[10%] cursor-pointer" src="/Images/Love.png" alt="" />
-                    </div>
-                    <div className="flex justify-left items-center mt-[25px]">
-                        <img className="w-[10%]" src="/Images/Ellipse 7.png" alt="" />
-                        <p className="text-white text-[25px] ml-[30px]">the real man in me: Jax man</p>
-                    </div>
+                    ))}
                 </div>
             </section>
         </>
