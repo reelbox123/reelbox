@@ -104,7 +104,7 @@ function Dashboard () {
                         <h2 className="mt-[30px] text-white text-[20px]">{reel.title}</h2>
                         <audio
                         ref={(el) => (audioRefs.current[index] = el)}
-                        src={reel.src}
+                        src={reels.src}
                         type="audio/mpeg"
                         style={{ display: 'none' }}
                         autoPlay={false}
