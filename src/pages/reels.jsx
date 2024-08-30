@@ -95,18 +95,13 @@ function Dashboard () {
                         key={index}
                         data-index={index}
                     >
-                        <img
-                        className="w-[25%] cursor-pointer rounded-2xl"
+                      <img
+                        className="w-[22%] cursor-pointer rounded-2xl"
                         src={reel.image}
                         alt={`Cover for ${reel.title}`}
                         onClick={() => (audioRefs.current[index].paused ? playAudio(index) : pauseAudio(index))}
                         />
                         <h2 className="mt-[30px] text-white text-[20px]">{reel.title}</h2>
-                        {/* <button
-                            className="text-white border-2 px-[30px] mt-[10px] cursor-pointer"
-                            onClick={() => (audioRefs.current[index].paused ? playAudio(index) : pauseAudio(index))}>
-                            {audioRefs.current[index]?.paused ? 'Play' : 'Pause'}
-                        </button> */}
                         <audio
                         ref={(el) => (audioRefs.current[index] = el)}
                         src={reel.src}
