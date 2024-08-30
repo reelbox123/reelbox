@@ -95,8 +95,8 @@ function Dashboard () {
                         key={index}
                         data-index={index}
                     >
-                      <img
-                        className="w-[22%] cursor-pointer rounded-2xl"
+                        <img
+                        className="w-[23%] cursor-pointer rounded-2xl"
                         src={reel.image}
                         alt={`Cover for ${reel.title}`}
                         onClick={() => (audioRefs.current[index].paused ? playAudio(index) : pauseAudio(index))}
@@ -106,6 +106,7 @@ function Dashboard () {
                         ref={(el) => (audioRefs.current[index] = el)}
                         src={reel.src}
                         style={{ display: 'none' }}
+                        autoPlay={false}
                         />
                     </div>
                     ))}
