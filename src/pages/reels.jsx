@@ -99,7 +99,7 @@ function Dashboard () {
                         className="w-[23%] cursor-pointer rounded-2xl"
                         src={reel.image}
                         alt={`Cover for ${reel.title}`}
-                        onClick={() => (audioRefs.current[index].play ? pauseAudio(index) : playAudio(index))}
+                        onClick={() => (audioRefs.current[index].paused ? playAudio(index) : pauseAudio(index))}
                         />
                         <h2 className="mt-[30px] text-white text-[20px]">{reel.title}</h2>
                         <audio
