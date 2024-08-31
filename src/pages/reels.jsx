@@ -106,9 +106,8 @@ function Dashboard () {
                           ref={(el) => (audioRefs.current[index] = el)}
                           src={reel.src}
                           type="audio/mpeg"
-                          style={{ display: 'none' }}
                           autoPlay={false}
-                          co
+                          controls={false}
                         />
                     </div>
                     ))}
