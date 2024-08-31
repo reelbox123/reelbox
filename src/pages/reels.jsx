@@ -6,22 +6,23 @@ const reels = [
       src: 'https://cdn.trendybeatz.com/audio/347aidan-Memories-(TrendyBeatz.com).mp3',
       title: '347aidan-Memories',
       image: '/Images/music1.png',
+      icon: '/Images/play.png',
       type: 'audio/mpeg',
     },
     {
-      src: '../assets/audio/audio2.mp3',
+      src: 'https://xclusivepop.work/wp-content/uploads/2022/11/Burna_Boy_-_Alone.mp3',
       title: 'Alone by Burnaboy',
       image: '/Images/music2.png',
       type: 'audio/mpeg',
     },
     {
-      src: '../assets/audio/audio3.mp3',
+      src: 'https://cdn3.justnaija.me/uploads/music/2020/08/Burna-Boy-Monsters-You-Made-ft-Chris-Martin-(JustNaija.com).mp3',
       title: 'Monster you made by Burnaboy',
       image: '/Images/music1.png',
       type: 'audio/mpeg',
     },
     {
-        src: '../assets/audio/audio3.mp3',
+        src: 'https://cdn.val9ja.com/wp-content/uploads/2024/04/Burna_Boy_Ft_Prince_Swanny_-_Tested_Approved_Trusted.mp3',
         title: 'Tested, Approved & Trusted (feat. Prince Swanny)',
         image: '/Images/music1.png',
         type: 'audio/mpeg',
@@ -62,28 +63,28 @@ function Dashboard () {
           });
         }
     }, [currentReelIndex]);
-    // useEffect(() => {
-    //     const options = {
-    //       root: null,
-    //       rootMargin: '0px',
-    //       threshold: 0.5, // Trigger when 50% of the element is visible
-    //     };
+    useEffect(() => {
+        const options = {
+          root: null,
+          rootMargin: '0px',
+          threshold: 0.5, // Trigger when 50% of the element is visible
+        };
     
-    //     const observer = new IntersectionObserver((entries) => {
-    //       entries.forEach((entry) => {
-    //         if (entry.isIntersecting) {
-    //           const index = parseInt(entry.target.dataset.index, 10);
-    //           handleReelVisibility(index);
-    //         }
-    //       });
-    //     }, options);
-    //     const reelElements = document.querySelectorAll('.reel');
-    //     reelElements.forEach((element) => observer.observe(element));
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const index = parseInt(entry.target.dataset.index, 10);
+              handleReelVisibility(index);
+            }
+          });
+        }, options);
+        const reelElements = document.querySelectorAll('.reel');
+        reelElements.forEach((element) => observer.observe(element));
 
-    //     return () => {
-    //     reelElements.forEach((element) => observer.unobserve(element));
-    //     };
-    // }, []);
+        return () => {
+        reelElements.forEach((element) => observer.unobserve(element));
+        };
+    }, []);
     return (
         <>
             <ReelsNavBar/>
@@ -100,7 +101,7 @@ function Dashboard () {
                         data-index={index}
                     >
                         <img
-                        className="w-[23%] cursor-pointer rounded-2xl"
+                        className="w-[22%] cursor-pointer rounded-2xl"
                         src={reel.image}
                         alt={`Cover for ${reel.title}`}
                         onClick={() => (audioRefs.current[index].paused ? playAudio(index) : pauseAudio(index))}

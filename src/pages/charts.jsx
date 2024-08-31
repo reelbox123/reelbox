@@ -1,6 +1,48 @@
 import ReelsNavBar from "./reelsNavbar"
 import Sidemenu from "../components/sidemenu"
+import React, { useState, useEffect, useRef } from 'react';
+const eminem = [
+    {
+      src: 'http://blownaija.com/wp-content/uploads/2018/09/KILLSHOT-Official-Audio-Blownaija.com_.mp3',
+      image: '/Images/Play (1).png',
+      title: 'Eminem - killshot',
+      type: 'audio/mpeg',
+    },
+]
 function Chart () {
+    const [currentReelIndex, setCurrentReelIndex] = useState(null);
+    const audioRefs = useRef([]); // Refs to all audio elements
+
+  // Function to handle when a reel becomes visible
+    const handleReelVisibility = (index) => {
+        setCurrentReelIndex(index); // Update current reel index to the visible one
+    };
+    const playAudio = (index) => {
+        if (audioRefs.current[index]) {
+          audioRefs.current[index].play();
+        }
+    };
+    
+      // Function to pause the audio for the current reel
+    const pauseAudio = (index) => {
+    if (audioRefs.current[index]) {
+        audioRefs.current[index].pause();
+    }
+  };
+    
+      // Effect to handle autoplay when the current reel changes
+      useEffect(() => {
+        if (currentReelIndex !== null) {
+          playAudio(currentReelIndex);
+    
+          // Pause other audio elements
+          audioRefs.current.forEach((audio, idx) => {
+            if (idx !== currentReelIndex) {
+              audio.pause();
+            }
+          });
+        }
+    }, [currentReelIndex]);
     return  (
         <>
             <ReelsNavBar/>
@@ -29,8 +71,27 @@ function Chart () {
                         </div>
                         </div>
                         <div className="flex justify-left items-center ml-[20px] mt-[70px]">
-                            <img className="w-[2.5%] mr-[20px]" src="/Images/Play (1).png" alt="" />
-                            <p className="text-white text-[20px]">The king of tears</p>
+                            {eminem.map((reel, index) => (
+                            <div
+                                className="reel flex justify-left items-center pt-[80px]"
+                                key={index}
+                                data-index={index}
+                            >   
+                                <img
+                                className="w-[3%] cursor-pointer rounded-2xl"
+                                src={reel.image}
+                                alt={`Cover for ${reel.title}`}
+                                onClick={() => (audioRefs.current[index].paused ? playAudio(index) : pauseAudio(index))}
+                                />
+                                <h2 className="ml-[10px] text-white text-[20px]">{reel.title}</h2>
+                                <audio
+                                    ref={(el) => (audioRefs.current[index] = el)}
+                                    src={reel.src}
+                                    autoPlay={false}
+                                    controls={false}
+                                />
+                            </div>
+                            ))}
                         </div>
                     </div>
                     <div className="text-white grid grid-cols-3 gap-4 text-[19px] mt-[30px]">
