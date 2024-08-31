@@ -43,7 +43,7 @@ function Dashboard () {
     if (audioRefs.current[index]) {
         audioRefs.current[index].pause();
     }
-    };
+  };
     
       // Effect to handle autoplay when the current reel changes
       useEffect(() => {
@@ -58,28 +58,28 @@ function Dashboard () {
           });
         }
     }, [currentReelIndex]);
-    useEffect(() => {
-        const options = {
-          root: null,
-          rootMargin: '0px',
-          threshold: 0.5, // Trigger when 50% of the element is visible
-        };
+    // useEffect(() => {
+    //     const options = {
+    //       root: null,
+    //       rootMargin: '0px',
+    //       threshold: 0.5, // Trigger when 50% of the element is visible
+    //     };
     
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              const index = parseInt(entry.target.dataset.index, 10);
-              handleReelVisibility(index);
-            }
-          });
-        }, options);
-        const reelElements = document.querySelectorAll('.reel');
-        reelElements.forEach((element) => observer.observe(element));
+    //     const observer = new IntersectionObserver((entries) => {
+    //       entries.forEach((entry) => {
+    //         if (entry.isIntersecting) {
+    //           const index = parseInt(entry.target.dataset.index, 10);
+    //           handleReelVisibility(index);
+    //         }
+    //       });
+    //     }, options);
+    //     const reelElements = document.querySelectorAll('.reel');
+    //     reelElements.forEach((element) => observer.observe(element));
 
-        return () => {
-        reelElements.forEach((element) => observer.unobserve(element));
-        };
-    }, []);
+    //     return () => {
+    //     reelElements.forEach((element) => observer.unobserve(element));
+    //     };
+    // }, []);
     return (
         <>
             <ReelsNavBar/>
@@ -103,11 +103,12 @@ function Dashboard () {
                         />
                         <h2 className="mt-[30px] text-white text-[20px]">{reel.title}</h2>
                         <audio
-                        ref={(el) => (audioRefs.current[index] = el)}
-                        src={reel.src}
-                        type="audio/mpeg"
-                        style={{ display: 'none' }}
-                        autoPlay={false}
+                          ref={(el) => (audioRefs.current[index] = el)}
+                          src={reel.src}
+                          type="audio/mpeg"
+                          style={{ display: 'none' }}
+                          autoPlay={false}
+                          co
                         />
                     </div>
                     ))}
