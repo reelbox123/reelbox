@@ -6,21 +6,25 @@ const reels = [
       src: '../assets/audio/audio1.mp3',
       title: 'Wild Things by Alessia',
       image: '/Images/music1.png',
+      type: 'audio/mpeg',
     },
     {
       src: '../assets/audio/audio2.mp3',
       title: 'Alone by Burnaboy',
       image: '/Images/music2.png',
+      type: 'audio/mpeg',
     },
     {
       src: '../assets/audio/audio3.mp3',
       title: 'Monster you made by Burnaboy',
       image: '/Images/music1.png',
+      type: 'audio/mpeg',
     },
     {
         src: '../assets/audio/audio3.mp3',
         title: 'Tested, Approved & Trusted (feat. Prince Swanny)',
         image: '/Images/music1.png',
+        type: 'audio/mpeg',
       },
   ];
   
@@ -105,7 +109,6 @@ function Dashboard () {
                         <audio
                           ref={(el) => (audioRefs.current[index] = el)}
                           src={reel.src}
-                          type="audio/mpeg"
                           autoPlay={false}
                           controls={false}
                         />
