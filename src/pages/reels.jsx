@@ -3,8 +3,8 @@ import Sidemenu from "../components/sidemenu"
 import React, { useState, useEffect, useRef } from 'react';
 const reels = [
     {
-      src: '../assets/audio/audio1.mp3',
-      title: 'Wild Things by Alessia',
+      src: 'https://cdn.trendybeatz.com/audio/347aidan-Memories-(TrendyBeatz.com).mp3',
+      title: '347aidan-Memories',
       image: '/Images/music1.png',
       type: 'audio/mpeg',
     },
