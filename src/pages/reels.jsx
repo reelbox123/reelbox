@@ -113,7 +113,7 @@ function Dashboard () {
                         className="cursor-pointer rounded-md"
                         style={{width: '100%', height: '60vh'}}
                       />
-                      <img className="left-[70%]" src={video.image} alt="" srcSet="" />
+                      <img className="" src={video.image} alt="" srcSet="" />
                       <h2 className="mt-[30px] text-white text-[20px] mb-[10px]">{video.title}</h2>
                     </div>
                     ))}
