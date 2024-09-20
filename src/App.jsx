@@ -1,16 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import LandingPage from './pages/landingPage.jsx'
 import Dashboard from "./pages/reels.jsx"
 import Uploads from './pages/uploads.jsx';
-import Pools from './pages/pools.jsx';
-import Chart from './pages/charts.jsx';
-import SubChart from './pages/subchart.jsx';
-import Trade from './pages/trade.jsx';
-import SubTrade from './pages/subtrade.jsx';
-import TopChart from './pages/topchart.jsx';
-import Collaboration from './pages/collaboration.jsx';
-import Chat from './pages/chat.jsx';
-import ConnectWallet from './pages/connectWallet.jsx';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -61,18 +51,8 @@ function App() {
             <BrowserRouter>
               <Routes>
                   <Route index element={<Dashboard />} />
-                  <Route path="/home" element={<LandingPage />} />
-                  <Route path="/connect" element={<ConnectWallet />} />
                   <Route path="/dashboard" element={<Dashboard />} />
                   <Route path="/uploads" element={<Uploads />} />
-                  <Route path="/pools" element={<Pools />} />
-                  <Route path="/chart" element={<Chart />} />
-                  <Route path="/subchart" element={<SubChart />} />
-                  <Route path="/trade" element={<Trade />} />
-                  <Route path="/subtrade" element={<SubTrade />} />
-                  <Route path="/topchart" element={<TopChart />} />
-                  <Route path="/collab" element={<Collaboration />} />
-                  <Route path="/chat" element={<Chat />} />
               </Routes>
             </BrowserRouter>
         </QueryClientProvider>

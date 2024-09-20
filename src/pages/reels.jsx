@@ -1,121 +1,123 @@
 import ReelsNavBar from "./reelsNavbar"
 import Sidemenu from "../components/sidemenu"
 import React, { useState, useEffect, useRef } from 'react';
-const reels = [
-    {
-      src: 'https://cdn.trendybeatz.com/audio/347aidan-Memories-(TrendyBeatz.com).mp3',
-      title: '347aidan-Memories',
-      image: '/Images/music1.png',
-      icon: '/Images/play.png',
-      type: 'audio/mpeg',
-    },
-    {
-      src: 'https://xclusivepop.work/wp-content/uploads/2022/11/Burna_Boy_-_Alone.mp3',
-      title: 'Alone by Burnaboy',
-      image: '/Images/music2.png',
-      type: 'audio/mpeg',
-    },
-    {
-      src: 'https://cdn3.justnaija.me/uploads/music/2020/08/Burna-Boy-Monsters-You-Made-ft-Chris-Martin-(JustNaija.com).mp3',
-      title: 'Monster you made by Burnaboy',
-      image: '/Images/music1.png',
-      type: 'audio/mpeg',
-    },
-    {
-        src: 'https://cdn.val9ja.com/wp-content/uploads/2024/04/Burna_Boy_Ft_Prince_Swanny_-_Tested_Approved_Trusted.mp3',
-        title: 'Tested, Approved & Trusted (feat. Prince Swanny)',
-        image: '/Images/music1.png',
-        type: 'audio/mpeg',
-      },
-  ];
+// import { useInView } from "react-intersection-observer";
+const videos = [
+  {
+    src:  'https://www.w3schools.com/html/mov_bbb.mp4',
+    title: 'Video 1',
+    image: '/Images/Love.png',
+    icon: '/Images/play.png',
+    type: 'video/mp4',
+  },
+  {
+    src: 'https://samplelib.com/lib/preview/mp4/sample-5s.mp4',
+    title: 'Video 2',
+    image: '/Images/Love.png',
+    icon: '/Images/play.png',
+    type: 'video/mp4',
+  },
+  {
+    src: 'https://storage.googleapis.com/webfundamentals-assets/videos/chrome.mp4',
+    title: 'Video 3',
+    image: '/Images/Love.png',
+    type: 'video/mp4',
+  },
+  {
+    src: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4',
+    title: 'Vidoe 4',
+    image: '/Images/Love.png',
+    type: 'video/mp4',
+  },
+];
   
 function Dashboard () {
-    const [currentReelIndex, setCurrentReelIndex] = useState(null);
-    const audioRefs = useRef([]); // Refs to all audio elements
+  const [currentReelIndex, setCurrentReelIndex] = useState(null);
+  const videoRefs = useRef([]); // Refs to all audio elements
 
-  // Function to handle when a reel becomes visible
-    const handleReelVisibility = (index) => {
-        setCurrentReelIndex(index); // Update current reel index to the visible one
-    };
-    const playAudio = (index) => {
-        if (audioRefs.current[index]) {
-          audioRefs.current[index].play();
-        }
-    };
-    
-      // Function to pause the audio for the current reel
-    const pauseAudio = (index) => {
-    if (audioRefs.current[index]) {
-        audioRefs.current[index].pause();
-    }
+  const handleReelVisibility = (index) => {
+    setCurrentReelIndex(index); // Update current reel index to the visible one
+  };
+  const playVideo = (index) => {
+      if (videoRefs.current[index]) {
+        videoRefs.current[index].play();
+      }
+  };
+  const pauseVideo = (index) => {
+    if (videoRefs.current[index]) {
+      videoRefs.current[index].pause();
+      }
   };
     
-      // Effect to handle autoplay when the current reel changes
-      useEffect(() => {
-        if (currentReelIndex !== null) {
-          playAudio(currentReelIndex);
-    
-          // Pause other audio elements
-          audioRefs.current.forEach((audio, idx) => {
-            if (idx !== currentReelIndex) {
-              audio.pause();
-            }
-          });
-        }
-    }, [currentReelIndex]);
-    useEffect(() => {
-        const options = {
-          root: null,
-          rootMargin: '0px',
-          threshold: 0.5, // Trigger when 50% of the element is visible
-        };
-    
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              const index = parseInt(entry.target.dataset.index, 10);
-              handleReelVisibility(index);
-            }
-          });
-        }, options);
-        const reelElements = document.querySelectorAll('.reel');
-        reelElements.forEach((element) => observer.observe(element));
+  useEffect(() => {
+  if (currentReelIndex !== null) {
+    playVideo(currentReelIndex);
 
-        return () => {
-        reelElements.forEach((element) => observer.unobserve(element));
-        };
-    }, []);
-    return (
+    // Pause other audio elements
+    videoRefs.current.forEach((video, idx) => {
+      if (idx !== currentReelIndex) {
+        video.pause();
+      }
+    });
+  }
+  }, [currentReelIndex]);
+  useEffect(() => {
+  const options = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.5, // Trigger when 50% of the element is visible
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const index = parseInt(entry.target.dataset.index, 10);
+        handleReelVisibility(index);
+      }
+    });
+  }, options);
+  const reelElements = document.querySelectorAll('.reel');
+  reelElements.forEach((element) => observer.observe(element));
+
+  return () => {
+    reelElements.forEach((element) => observer.unobserve(element));
+    };
+  }, []);
+
+  return (
         <>
             <ReelsNavBar/>
             <Sidemenu/>
-            <div className="flex justify-center items-center pt-[100px]">
-                <input className="border-2 py-[5px] px-[30px] w-[30%] outline-none rounded-md bg-transparent text-white text-[18px] text-center" type="text" placeholder="Search" />
-            </div>
             <section>
-                <div className="reels-container">
-                    {reels.map((reel, index) => (
+              <div className="text-white flex justify-left items-left flex-col pl-[300px] pt-[100px]">
+                <h1 className="text-[20px] mb-[20px]">SHORT REELS</h1>
+                <div className="flex justify-left items-center mb-[30px]">
+                  <img className="mr-[10px]" src="/Images/Ellipse 3.png" alt="" />
+                  <p>David lahmann channel</p>
+                </div>
+                <p className="text-[17px] tracking-widest">How to make it work at a goal</p>
+              </div>
+              <div className="pl-[200px] flex justify-center items-center flex-col pt-[30px]">
+              {videos.map((video, index) => (
                     <div
                         className="reel flex justify-center items-center flex-col pt-[80px]"
                         key={index}
                         data-index={index}
                     >
-                        <img
-                        className="w-[22%] cursor-pointer rounded-2xl"
-                        src={reel.image}
-                        alt={`Cover for ${reel.title}`}
-                        onClick={() => (audioRefs.current[index].paused ? playAudio(index) : pauseAudio(index))}
-                        />
-                        <h2 className="mt-[30px] text-white text-[20px]">{reel.title}</h2>
-                        <audio
-                          ref={(el) => (audioRefs.current[index] = el)}
-                          src={reel.src}
-                          autoPlay={false}
-                          controls={false}
-                        />
+                      <video
+                        ref={(el) => (videoRefs.current[index] = el)}
+                        src={video.src}
+                        autoPlay={false}
+                        controls={false}
+                        onClick={() => (videoRefs.current[index].paused ? playVideo(index) : pauseVideo(index))}
+                        className="cursor-pointer rounded-md"
+                        style={{width: '100%', height: '60vh'}}
+                      />
+                      <img className="left-[70%]" src={video.image} alt="" srcSet="" />
+                      <h2 className="mt-[30px] text-white text-[20px] mb-[10px]">{video.title}</h2>
                     </div>
                     ))}
-                </div>
+              </div>
             </section>
         </>
     )

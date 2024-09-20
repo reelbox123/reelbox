@@ -36,9 +36,6 @@ function Uploads () {
         <>
             <ReelsNavBar/>
             <Sidemenu/>
-            <div className="flex justify-center items-center pt-[100px]">
-                <input className="border-2 py-[5px] px-[30px] w-[30%] outline-none rounded-md bg-transparent text-white text-[18px] text-center" type="text" placeholder="Search" />
-            </div>
             <section className="pl-[300px] pt-[30px]">
                 <h1 className="text-white text-[20px]">UPLOAD</h1>
                 <div className="text-white relative">
@@ -55,36 +52,18 @@ function Uploads () {
                             />
                         </div>
                     </div>
-                    <p className="text-white text-[20px] tracking-widest mt-[30px]">Enter Title</p>
+                    <p className="text-white text-[20px] tracking-widest mt-[30px]">Enter Video Title</p>
                     <input value={audioTitle} onChange={(e) => setAudioTitle(e.target.value)} required className="mt-[10px] w-[60%] p-[10px] border-2 border-neutral-800 bg-transparent outline-none" type="text" />
                     <p className="text-white text-[20px] tracking-widest mt-[30px]">Description</p>
                     <input  value={audioDescription} onChange={(e) => setAudioDescription(e.target.value)} required className="mt-[10px] w-[60%] p-[10px] border-2 border-neutral-800 bg-transparent outline-none" type="text" />
                 </div>
-                <div className="flex mt-[30px] relative justify-left items-center">
-                    <p className="text-white mr-[30px] py-[20px] px-[30px] border-2 border-neutral-800 bg-transparent">Upload Ablum</p>
-                    <input
-                        className="flex py-[10px] px-[10px] rounded-md text-[15px] font-medium shadow-md text-white hover:bg-[#ff014f] hover:text-white bg-[#DE0808] sm:hidden md:hidden lg:flex"
-                        type="file"
-                        accept="image/*"
-                        onChange={(e) => setAudioImage(e.target.files[0])}
-                    />
-                </div>
-                <a href="/connect" rel="noopener noreferrer"><button  className="flex py-[10px] px-[70px] mt-[20px] rounded-md text-[15px] font-medium shadow-md text-white hover:bg-[#ff015f] hover:text-white bg-[#DE0808] sm:hidden md:hidden lg:flex" type="button">Upload Image</button></a>
-                <div className="mt-[20px]">
-                    <label className="text-white text-[22px]" htmlFor="">Category</label>
-                    <div className="flex justify-left items-center">
-                        <select className="w-[20%] mr-[10px] mt-[20px] bg-transparent border-2 border-neutral-800 py-[9px] px-[10px] cursor-pointer text-[20px]" name="" id="">
-                            <option value="">Pop</option>
-                            <option value="">Rock</option>
-                            <option value="">Jazz</option>
-                        </select>
-                        <div className="flex mt-[10px]">
-                            <input className="mr-[10px]" type="checkbox" name="" id="" />
-                            <h2 className="text-white">Short reels</h2>
-                        </div>
+                <div className="flex justify-left items-center">
+                    <div className="flex mt-[10px]">
+                        <input className="mr-[10px]" type="checkbox" name="" id="" />
+                        <h2 className="text-white">Short reels</h2>
                     </div>
                 </div>
-                <a href="/connect" rel="noopener noreferrer"><button  className="flex justify-center  py-[10px] px-[70px] mt-[30px] rounded-md text-[15px] font-medium shadow-md text-white hover:bg-[#ff014f] hover:text-white bg-[#DE0808] w-[50%] sm:hidden md:hidden lg:flex" type="submit">Upload & Publish</button></a>
+                <a href="/connect" rel="noopener noreferrer"><button  className="flex justify-center mb-[20px]  py-[10px] px-[70px] mt-[30px] rounded-md text-[15px] font-medium shadow-md text-white hover:bg-[#ff014f] hover:text-white bg-[#DE0808] w-[50%] sm:hidden md:hidden lg:flex" type="submit">Upload & Publish</button></a>
             </section>
         </>
     )
