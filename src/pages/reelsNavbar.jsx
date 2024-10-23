@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 function ReelsNavBar () {
+
     const [nav, setNav] = useState(false);
     const showNav = ()  => {
        setNav(!nav)
@@ -20,7 +21,6 @@ function ReelsNavBar () {
                         </div>
                     </div>
                     <ul className="flex justify-center items-center text-[16px] space-x-5 text-white sm:hidden md:hidden lg:flex">
-                        <w3m-button />
                     </ul>
                     <div className={!nav ? 'fixed left-[-100%]' : 'fixed left-0 top-0 w-[40%] text-black mt-[76px] h-full bg-[#E4E4E4] shadow-md ease-in-out duration-500 sm:w-[80%] md:w-[40%] lg:hidden'}>
                         <ul className="uppercase w-full p-12 space-y-6">

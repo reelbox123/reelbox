@@ -90,7 +90,10 @@ function Dashboard () {
             <Sidemenu/>
             <section>
               <div className="text-white flex justify-left items-left flex-col pl-[300px] pt-[100px]">
-                <h1 className="text-[20px] mb-[20px]">SHORT REELS</h1>
+                <div className="flex justify-between items-center mr-[30px]">
+                  <h1 className="text-[20px] mb-[20px]">SHORT REELS</h1>
+                  <a href="https://web.telegram.org/a/#-1002495391379" target="_blank" rel="noopener noreferrer"><img className="w-[25%] cursor-pointer" title="telegram-channel" src="/Images/Telegram App.png" alt="" srcset="" /></a>
+                </div>
                 <div className="flex justify-left items-center mb-[30px]">
                   <img className="mr-[10px]" src="/Images/Ellipse 3.png" alt="" />
                   <p>David lahmann channel</p>

@@ -36,10 +36,10 @@ function Uploads () {
         <>
             <ReelsNavBar/>
             <Sidemenu/>
-            <section className="pl-[300px] pt-[30px]">
-                <h1 className="text-white text-[20px]">UPLOAD</h1>
+            <section className="pl-[300px] pt-[120px]">
+                <h1 className="text-white text-[28px]">Upload Video</h1>
                 <div className="text-white relative">
-                    <div className="border-2 border-neutral-800 mt-[30px] flex justify-center items-center flex-col py-[50px] px-[30px] w-[60%]">
+                    {/* <div className="border-2 border-neutral-800 mt-[30px] flex justify-center items-center flex-col py-[50px] px-[30px] w-[60%]">
                         <img className="w-[15%]" src="/Images/Upload.png" alt="" />
                         <div className="mt-[60px] flex justify-center items-center">
                             <h1 className="text-white text-[20px] mr-[40px]">Drag and drop or</h1>
@@ -51,11 +51,14 @@ function Uploads () {
                                 required
                             />
                         </div>
-                    </div>
-                    <p className="text-white text-[20px] tracking-widest mt-[30px]">Enter Video Title</p>
-                    <input value={audioTitle} onChange={(e) => setAudioTitle(e.target.value)} required className="mt-[10px] w-[60%] p-[10px] border-2 border-neutral-800 bg-transparent outline-none" type="text" />
+                    </div> */}
+                    <p className="text-white text-[20px] tracking-widest mt-[30px]">Title</p>
+                    <input value={audioTitle} onChange={(e) => setAudioTitle(e.target.value)} required className="mt-[10px] w-[50%] p-[10px] border border-gray-800 bg-transparent outline-none" type="text" placeholder="Title of  your video" />
                     <p className="text-white text-[20px] tracking-widest mt-[30px]">Description</p>
-                    <input  value={audioDescription} onChange={(e) => setAudioDescription(e.target.value)} required className="mt-[10px] w-[60%] p-[10px] border-2 border-neutral-800 bg-transparent outline-none" type="text" />
+                    <input  value={audioDescription} onChange={(e) => setAudioDescription(e.target.value)} required className="mt-[10px] w-[50%] h-[20vh] p-[10px] border border-gray-800 bg-transparent outline-none" type="text" placeholder="Description of  your video" />
+                    <p className="text-white text-[20px] tracking-widest mt-[30px]">Label</p>
+                    <input value={audioTitle} onChange={(e) => setAudioTitle(e.target.value)} required className="mt-[10px] w-[50%] mb-[30px] p-[10px] border border-gray-800 bg-transparent outline-none" type="text" placeholder="Label your video (e.g sport, news, ....)" />
+                   
                 </div>
                 <div className="flex justify-left items-center">
                     <div className="flex mt-[10px]">
